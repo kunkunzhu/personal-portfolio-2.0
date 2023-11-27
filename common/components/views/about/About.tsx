@@ -141,7 +141,7 @@ function Workspace() {
                     <Draggable>
                         <Paragraph>
                         Kun is a third year student at the University of Waterloo,&thinsp; 
-                        <a href={'https://bit.ly/kunstudyrepo'} target='_blank' rel='noreferrer'>studying</a> 
+                        <a href={'https://bit.ly/3SZn58m'} target='_blank' rel='noreferrer'>studying</a> 
                         &thinsp;Statistics / Combinatorics & Optimization with a 
                         minor in Cognitive Science.
                         </Paragraph>
