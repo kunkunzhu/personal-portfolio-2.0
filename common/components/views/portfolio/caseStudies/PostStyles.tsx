@@ -8,6 +8,13 @@ export const Wrapper = styled.div`
 /* HEADER STYLE */
 
 export const Hero = styled.img`
+    width: 60%;
+    height: auto;
+    maxheight: 35rem;
+    padding-top: 1.5rem;
+`
+
+export const TallHero = styled.img`
     height: 25rem;
     width: auto;
     padding-top: 1.5rem;
@@ -96,6 +103,7 @@ export const Paragraph = styled.div`
     img {
         max-width: 100%;
         padding: 1rem 0 1rem 0;
+        height: auto;
     }
     .imgRow{
         display: flex;
@@ -107,6 +115,19 @@ export const Paragraph = styled.div`
             padding: 1px;
             width: 45%;
         }
+    }
+`
+
+export const ImageRow = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    * {
+        display: grid;
+        height: 100%;
+        width: auto;
     }
 `
 

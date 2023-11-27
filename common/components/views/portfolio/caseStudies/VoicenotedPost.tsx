@@ -1,7 +1,7 @@
 import React from "react";
 import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
 import { 
-    Hero, 
+    TallHero, 
     Summary, 
     Title,
     Heading,
@@ -23,7 +23,7 @@ function VoicenotedPostContent() {
                             Reimagining the podcast experience through notetaking functionality to optimize the learning experience.
                         </div>
                     </Title>
-                    <Hero src="https://i.ibb.co/5xYM2z2/Hero.png"/>
+                    <TallHero src="https://i.ibb.co/5xYM2z2/Hero.png"/> 
                 </Summary>
                 <Section>
                     <Paragraph>
