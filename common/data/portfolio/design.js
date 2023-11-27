@@ -1,12 +1,12 @@
 const designData = {
-    technova21: {
-        key: "technova21",
-        image: "https://i.ibb.co/bWRL3YL/Tech-Nova-2022.png",
-        title: "TechNova 2021",
+    technova22: {
+        key: "technova22",
+        image: "https://i.ibb.co/yfzY7pn/Frame-1293.png",
+        title: "TechNova 2022",
         subtitle: "Designing for Hackathon",
-        description: "Innovating the branding and spearheading various design projects for UWaterloo's gender empowerment hackathon.",
+        description: "Evolving the visual experience of UWaterloo's gender empowerment hackathon.",
         prompt: "behind the scene",
-        link: "/portfolio/design/technova21"
+        link: "/portfolio/design/technova22"
     },
     voicenoted: {
         key: "voicenoted",
@@ -17,14 +17,14 @@ const designData = {
         prompt: "case study",
         link: "/portfolio/design/voicenoted",
     },
-    technova22: {
-        key: "technova22",
-        image: "https://i.ibb.co/yfzY7pn/Frame-1293.png",
-        title: "TechNova 2022",
+    technova21: {
+        key: "technova21",
+        image: "https://i.ibb.co/bWRL3YL/Tech-Nova-2022.png",
+        title: "TechNova 2021",
         subtitle: "Designing for Hackathon",
-        description: "Evolving the visual experience of UWaterloo's gender empowerment hackathon.",
-        prompt: "work in progress",
-        link: null
+        description: "Innovating the visual identity for UWaterloo's inaugural gender empowerment hackathon.",
+        prompt: "behind the scene",
+        link: "/portfolio/design/technova21"
     },
     moodment: {
         key: "moodment",
