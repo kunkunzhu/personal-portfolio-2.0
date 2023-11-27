@@ -19,7 +19,7 @@ export default function Nav() {
     return (
         <NavWrapper>
             <NavItem href="/">About</NavItem>
-            <NavItem href="/portfolio">Portfolio</NavItem>
+            <NavItem href="/portfolio/design">Portfolio</NavItem>
         </NavWrapper>
     )
 }

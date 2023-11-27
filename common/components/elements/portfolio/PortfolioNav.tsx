@@ -63,11 +63,11 @@ export default function PortfolioNav() {
         <BrowserBar>
             <NavWrapper>
                 <div className="divItems">
-                    <NavItem 
+                    {/* <NavItem 
                     href="/portfolio" 
                     >
                     dev
-                    </NavItem>
+                    </NavItem> */}
                     <NavItem 
                     href="/portfolio/design" 
                     >
