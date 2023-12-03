@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import styled from "styled-components";
+import Link from "next/link";
 import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
 import { 
     Hero, 
@@ -9,42 +11,74 @@ import {
     Section,
     SectionDivider,
     Wrapper,
-    ImageRow
 } from './PostStyles'
 
-function Technova22PostContent() {
-    return(
+const ImagesRow = styled.div`
+    padding-top: 1rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: space-between;
+    * {
+        max-width: 50%;
+        height: auto;
+    }
+`
+
+const ImagesCol = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    * {
+        max-width: 70%;
+        height: auto;
+    }
+`
+
+const ButtonRow = styled.div`
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+`
+
+const OptionButtons = styled.button`
+    margin-top: 1rem;
+    align-self: flex-start;
+    border-radius: 20px;
+    border: 2px solid #333;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    text-decoration: none;
+    background: inherit;
+    font-family: inherit;
+    font-size: 1rem;
+    text-transform: uppercase;
+    width: 25%;
+    &:hover {
+        margin-top: 0.9rem;
+        font-size: 1.1rem;
+        transition: 0.1s ease-out; 
+        color: white;
+        background: #333;
+    }
+    cursor: crosshair;
+`
+
+const Technova22Reflection = () => {
+    
+    return (
         <Wrapper>
-            <Summary>
-                <Title>
-                    <div className="title">
-                        TechNova 2022
-                    </div>
-                    <div className="subtitle">
-                        Evolving the visual experience of UWaterloo's gender empowerment hackathon.
-                    </div>
-                </Title>
-                <Hero src="https://i.ibb.co/dBhmQ7S/15-Macbook-Pro-Mockup-Left-View.png"/>
-            </Summary>
-            <Section>
-                <Paragraph>
-                    <div className="paragraph">
-                        TechNova’s mission is to create safe, inclusive and empowering spaces for women 
-                        and non-binary individuals to start, grow and thrive in the technology industry. 
-                        While traditional hackathons tend to place an emphasis on competition and feel 
-                        like a somewhat intimidating space, TechNova focuses on creating a welcoming 
-                        environment for individuals of underrepresented genders to connect and learn.
-                    </div>
-                    <div className="paragraph">
-                        Volunteering at TechNova marked the beginning of my journey in UX design and 
-                        graphic design. Returning to the same team as a Design Lead for the second iteration 
-                        of the hackathon felt like an incredibly rewarding and exciting opportunity. From 
-                        May to August 2022, I had the opportunity to lead a very talented team of designers 
-                        to see through the fruition of another successful event :)
-                    </div>
-                </Paragraph>
-            </Section>
-            <SectionDivider/>
+            HELLO WORLD
+        </Wrapper>
+    )
+}
+
+const Technova22DesignProjects = () => {
+
+    return (
+        <Wrapper>
             <Section>
                 <Heading>1. Branding + Style Guide</Heading>
                 <Paragraph>
@@ -60,19 +94,30 @@ function Technova22PostContent() {
                         into the existing color palette.
                     </div>
                 </Paragraph>
+                <ImagesRow>
+                    <ImagesCol>
+                        <img src="https://i.ibb.co/tmCg2dy/Typography-1.png"/>
+                        <img src="https://i.ibb.co/9Txv8Cx/Logo-1.png"/>
+                    </ImagesCol>
+                    <img src="https://i.ibb.co/YkBFJd1/Colours-1.png"/>
+                </ImagesRow>
             </Section>
+            <SectionDivider/>
             <Section>
                 <Heading>2. Website UX</Heading>
                 <Paragraph>
-                    <div className="paragraph">
-                        As a central resources hub, the hackathon website played a key role in introducing 
-                        the event and attracting potential attendees — both hackers and sponsors. As such, 
-                        it’s one of the largest and most important projects the design team worked on over 
-                        the course of the term. Each designer participated in the project by taking ownership 
-                        of one part of the website, and we replied on feedbacks from each other to create 
-                        refinements and compile into the final version. Check out the <a href="https://2022.itstechnova.org/" target="_blank">
-                        implemented website</a> and the <a href="https://bit.ly/3SV3XIx" target="_blank">Figma prototype</a> :)
-                    </div>
+                    <ImagesRow>
+                        <div className="paragraph">
+                            As a central resources hub, the hackathon website played a key role in introducing 
+                            the event and attracting potential attendees — both hackers and sponsors. As such, 
+                            it’s one of the largest and most important projects the design team worked on over 
+                            the course of the term. Each designer participated in the project by taking ownership 
+                            of one part of the website, and we replied on feedbacks from each other to create 
+                            refinements and compile into the final version. Check out the <a href="https://2022.itstechnova.org/" target="_blank">
+                            implemented website</a> and the <a href="https://bit.ly/3SV3XIx" target="_blank">Figma prototype</a> :)
+                        </div>
+                        <img src="https://i.ibb.co/Wfs8wGD/ezgif-5-4f1190c7d5.gif"/>
+                    </ImagesRow>
                     <div className="paragraph">
                         Designing a website entirely in dark mode turned out to be both a fun and challenging 
                         experience! The Design team worked in close collaboration with the Engineering team, 
@@ -122,18 +167,82 @@ function Technova22PostContent() {
                         favourite project that I worked on for the hackathon! Each hacker at TechNova received a wide range of swag items: 
                         from T-shirt, waterbottle, to stickers. In particular, I created the design for the tote bag. 
                     </div>
-                    <ImageRow> 
-                        {/* make custom style for this ahhhhh*/}
+                </Paragraph>
+                    <ImagesRow>
                         <img src="https://i.ibb.co/b2tGrYv/Goovy-1.png"/>
                         <img src="https://i.ibb.co/wSr46nL/IMG-4841.jpg"/>
-                    </ImageRow>
+                    </ImagesRow>
+                <Paragraph>
                     <div className="paragraph">
                         It was my first time designing a swag item, and I absolutely loved the whole experience. I would occasionally see someone
                         carrying a tote bag that I designed walking through campus, and it always makes me feel so happy whenever that happens :)
                     </div>
                 </Paragraph>
             </Section>
-        </Wrapper>
+        </ Wrapper>
+    )
+}
+
+function Technova22PostContent() {
+
+    const [displayProjects, setDisplayProjects] = useState(true)
+
+    return(
+        <>
+            <Wrapper>
+                <Summary>
+                    <Title>
+                        <div className="title">
+                            TechNova 2022
+                        </div>
+                        <div className="subtitle">
+                            Evolving the visual experience of UWaterloo's gender empowerment hackathon.
+                        </div>
+                    </Title>
+                    <Hero src="https://i.ibb.co/dBhmQ7S/15-Macbook-Pro-Mockup-Left-View.png"/>
+                </Summary>
+                <Section>
+                    <Paragraph>
+                        <div className="paragraph">
+                            TechNova’s mission is to create safe, inclusive and empowering spaces for women 
+                            and non-binary individuals to start, grow and thrive in the technology industry. 
+                            While traditional hackathons tend to place an emphasis on competition and feel 
+                            like a somewhat intimidating space, TechNova focuses on creating a welcoming 
+                            environment for individuals of underrepresented genders to connect and learn.
+                        </div>
+                        <div className="paragraph">
+                            Volunteering at TechNova marked the beginning of my journey in UX design and 
+                            graphic design. Returning to the same team as a Design Lead for the second iteration 
+                            of the hackathon felt like an incredibly rewarding and exciting opportunity. From 
+                            May to August 2022, I had the opportunity to lead a very talented team of designers 
+                            to see through the fruition of another successful event :)
+                        </div>
+                        <div className="paragraph">
+                            Click below to view more!
+                        </div>
+                    </Paragraph>
+                    <ButtonRow>
+                        <OptionButtons onClick={() => setDisplayProjects(true)}>
+                            design projects
+                        </OptionButtons>
+                        <OptionButtons onClick={() => setDisplayProjects(false)}>
+                            reflection
+                        </OptionButtons>
+                        <OptionButtons>
+                            <Link href="/portfolio/design/technova21">
+                                Technova 2022
+                            </Link>
+                        </OptionButtons>
+                    </ButtonRow>
+                </Section>
+                <SectionDivider/>
+            </Wrapper>
+            {displayProjects ?
+                Technova22DesignProjects()
+                :
+                Technova22Reflection()
+            }
+        </>
     )
 }
 
