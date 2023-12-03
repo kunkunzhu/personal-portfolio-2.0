@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
     width: 70vw;
     margin: auto;
+    display: flex;
+    flex-direction: column;
 `
 
 /* HEADER STYLE */
@@ -101,6 +103,7 @@ export const Paragraph = styled.div`
         }
     }
     img {
+        margin: auto;
         max-width: 100%;
         padding: 1rem 0 1rem 0;
         height: auto;
@@ -115,19 +118,6 @@ export const Paragraph = styled.div`
             padding: 1px;
             width: 45%;
         }
-    }
-`
-
-export const ImageRow = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-    gap: 2rem;
-    margin: 0 auto;
-    max-width: 1200px;
-    * {
-        display: grid;
-        height: 100%;
-        width: auto;
     }
 `
 
