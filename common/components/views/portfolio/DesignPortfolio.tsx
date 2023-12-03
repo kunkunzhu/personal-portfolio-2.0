@@ -43,7 +43,6 @@ const ProjectInfo = styled.div`
         padding: 0.5rem 1rem 0.5rem 1rem;
         text-decoration: none;
         background: inherit;
-        text-decoration: none;
         font-family: inherit;
         font-size: 1rem;
     }
