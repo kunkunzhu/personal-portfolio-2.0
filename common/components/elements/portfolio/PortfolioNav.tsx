@@ -76,7 +76,13 @@ export default function PortfolioNav() {
                     <NavItem
                     href="/portfolio/misc" 
                     >
-                    misc
+                    experiences
+                    </NavItem>
+                    <NavItem
+                    href="/resume.pdf"
+                    target="_blank"
+                    >
+                    resume
                     </NavItem>
                 </div>
             </NavWrapper>
