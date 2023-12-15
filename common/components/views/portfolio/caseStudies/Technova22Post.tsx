@@ -116,7 +116,7 @@ const Technova22DesignProjects = () => {
                             refinements and compile into the final version. Check out the <a href="https://2022.itstechnova.org/" target="_blank">
                             implemented website</a> and the <a href="https://bit.ly/3SV3XIx" target="_blank">Figma prototype</a> :)
                         </div>
-                        <img src="https://i.ibb.co/Wfs8wGD/ezgif-5-4f1190c7d5.gif"/>
+                        <img style={{marginLeft: "2.5rem"}} src="https://i.ibb.co/Wfs8wGD/ezgif-5-4f1190c7d5.gif"/>
                     </ImagesRow>
                     <div className="paragraph">
                         Designing a website entirely in dark mode turned out to be both a fun and challenging 
@@ -133,6 +133,7 @@ const Technova22DesignProjects = () => {
                         We decided to showcase the information for each organization that generously sponsored or 
                         partnered with the hackathon in the format of space ticket, which was so fun to make.
                     </div>
+                    <img src="https://i.ibb.co/80wF2Rg/Frame-772-1.png"/>
                     <div className="paragraph">
                         Recognizing that many of hackers access the website from their mobile devices, we also sought 
                         to prioritize <a href="https://bit.ly/3SWx1iI" target="_blank">mobile UX design</a> for this term. 
@@ -157,6 +158,10 @@ const Technova22DesignProjects = () => {
                         One thing that we to ensure a cohesive visual theme for our Instagram feed is creating connected backgrounds 
                         for the individual Instagram posts — with the background fading from a darker to a lighter tone. 
                     </div>
+                    <div className="paragraph">
+                        Some of  . We were lucky to have , whose generousity enabled the success of the event. It was a fun 
+                    </div>
+                    <img src="https://i.ibb.co/D84dssc/Untitled-18.png"/>
                 </Paragraph>
             </Section>
             <Section>
