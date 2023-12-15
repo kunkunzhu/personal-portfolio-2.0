@@ -1,87 +1,25 @@
 import React, {ReactNode} from "react";
 import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
 import designData from "@/common/data/portfolio/design.js"
-import styled from "styled-components";
-import Link from "next/link";
+import { 
+    ProjectWrapper,
+    ProjectImage,
+    ProjectInfo,
+    ProjectLink,
+    Header
+ } from "./PortfolioStyles";
 
-const Header = styled.div`
-    width: 70vw;
-    margin: auto;
-    margin-top: 5rem;
+interface DesignProjects {
+    key: string,
+    image: string,
+    title: string,
+    subtitle: string,
+    description: string,
+    prompt: string,
+    link: string | null,
+}
 
-    .header {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-    }
-`
-
-const ProjectInfo = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-left: 4rem;
-    width: 25rem;
-    justify-content: center;
-
-    .subtitle {
-        font-size: 1rem;
-    }
-    .title {
-        text-transform: uppercase;
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
-    }
-    .description {
-        font-size: 1.2rem;
-    }
-    .link {
-        margin-top: 1rem;
-        align-self: flex-start;
-        border-radius: 20px;
-        border: 2px solid #333;
-        padding: 0.5rem 1rem 0.5rem 1rem;
-        text-decoration: none;
-        background: inherit;
-        font-family: inherit;
-        font-size: 1rem;
-    }
-    span {
-        opacity: 0.5;
-    }
-    button {
-        &:hover {
-            margin-top: 0.9rem;
-            font-size: 1.1rem;
-            transition: 0.1s ease-out; 
-            color: white;
-            background: #333;
-        }
-        cursor: crosshair;
-    }
-`
-
-const ProjectImage = styled.img`
-    width: 25rem;
-    height: 100%;
-    object-fit: contain;
-    border: 2px solid black;
-    border-radius: 15px;
-    padding: 0.5rem;
-`
-
-const ProjectWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    width: 60vw;
-    margin: auto;
-    padding-top: 5rem;
-`
-
-const ProjectLink = styled(Link)``
-
-
-const ProjectBox = ({ project }:{ project: any }) => {
+const ProjectBox = ({ project }:{ project: DesignProjects }) => {
     return (
         <ProjectWrapper>
             <ProjectImage src={project.image}/>
