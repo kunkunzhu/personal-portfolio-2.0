@@ -31,16 +31,16 @@ const designData = {
         image: "https://i.ibb.co/YLnThhm/Frame-1292.png",
         title: "Moodment",
         subtitle: "Personal Project",
-        description: "",
-        prompt: "work in progress",
-        link: null
+        description: "Cultivating emotional literacy through mindful awareness.",
+        prompt: "case study",
+        link: "/portfolio/design/moodment"
     },
     // frui: {
     //     key: "technova22",
     //     image: "https://i.ibb.co/FkpZXWT/Technova-Pic.png",
     //     title: "FRUI",
     //     subtitle: "personal project",
-    //     description: "Exploring .",
+    //     description: "Engage more in what enlivens you.",
     //     prompt: "work in progress",
     //     link: null
     // },
