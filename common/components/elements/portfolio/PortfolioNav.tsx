@@ -33,6 +33,7 @@ const NavWrapper = styled.div`
 
 const NavItem = styled(Link)`
     font-size: 1rem;
+    font-family: var(--title-font);
     padding: 0.5rem 2rem 0.5rem 2rem;
     text-transform: uppercase;
     border: 2px solid black;
@@ -41,8 +42,8 @@ const NavItem = styled(Link)`
     vertical-align: baseline;
 
     :hover {
-        background: #333;
-        color: white;
+        background: var(--dark);
+        color: var(--light);
         cursor: crosshair
     }
 `

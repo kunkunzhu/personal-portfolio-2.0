@@ -5,12 +5,13 @@ import Link from "next/link";
 export const Header = styled.div`
     width: 70vw;
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 4rem;
 
     .header {
         font-size: 2.5rem;
         font-weight: bold;
         margin-bottom: 1rem;
+        font-family: var(--title-font);
     }
 `
 
@@ -27,27 +28,28 @@ export const Wrapper = styled.div`
 export const ProjectInfo = styled.div`
     display: flex;
     flex-direction: column;
-    margin-left: 4rem;
-    width: 25rem;
+    margin-left: 6rem;
     justify-content: center;
 
     .subtitle {
         font-size: 1rem;
+        opacity: 0.5;
     }
     .title {
+        font-family: var(--title-font);
         text-transform: uppercase;
         font-size: 2.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.8rem;
         font-weight: 600;
     }
     .description {
         font-size: 1.2rem;
     }
     .link {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         align-self: flex-start;
         border-radius: 20px;
-        border: 2px solid #333;
+        border: 2px solid var(--dark);
         padding: 0.5rem 1rem 0.5rem 1rem;
         text-decoration: none;
         background: inherit;
@@ -59,11 +61,12 @@ export const ProjectInfo = styled.div`
     }
     button {
         &:hover {
-            margin-top: 0.9rem;
-            font-size: 1.1rem;
+            margin-top: 1rem;
+            font-size: 1.5rem;
             transition: 0.1s ease-out; 
-            color: white;
-            background: #333;
+            color: var(--light);
+            background: var(--dark);
+            border-radius: 10rem;
         }
         cursor: crosshair;
     }
@@ -73,7 +76,7 @@ export const ProjectImage = styled.img`
     width: 25rem;
     height: 100%;
     object-fit: contain;
-    border: 2px solid #333;
+    border: 2px solid var(--dark);
     border-radius: 15px;
     padding: 0.5rem;
 `
@@ -81,7 +84,7 @@ export const ProjectImage = styled.img`
 export const ProjectWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    width: 60vw;
+    width: 70vw;
     margin: auto;
     padding-top: 5rem;
 `
@@ -94,7 +97,7 @@ export const AllExpWrapper = styled.div`
     flex-direction: column;
     width: 80%;
     margin: auto;
-    gap: 5rem;
+    gap: 2rem;
     padding: 5rem 0 5rem 0;
 `
 
@@ -104,13 +107,16 @@ export const ExpYearWrapper = styled.div`
     gap: 1rem;
     display: inline-flex;
     .year {
-        padding-bottom: 0.5rem;
+        font-style: italic;
+        font-size: 1.5rem;
+        opacity: 0.5;
+        font-family: var(--title-font);
     }
 `
 
 export const ExpPilLWrapper = styled.div`
     border-radius: 5rem;
-    border: 2px solid #333;
+    border: 2px solid var(--dark);
     word-wrap: break-word;
     padding: 1rem 1.5rem 1rem 1.5rem;
     display: flex;
@@ -120,10 +126,10 @@ export const ExpPilLWrapper = styled.div`
         font-size: 0.8rem;
     }
     &:hover {
-        background: #333;
+        background: var(--dark);
         cursor: crosshair;
         transition: 0.1s ease-out; 
-        color: white;
+        color: var(--light);
     }
 `
 export const ExpTitle = styled.div`

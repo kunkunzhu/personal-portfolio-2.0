@@ -57,8 +57,8 @@ const PortfolioContent = styled.div`
     }
 
     ::-webkit-scrollbar-thumb {
-        background-color: white;
-        outline: 2px solid #333;
+        background-color: var(--light);
+        outline: 2px solid var(--dark);
         border-radius: 15px;
       }
 `
