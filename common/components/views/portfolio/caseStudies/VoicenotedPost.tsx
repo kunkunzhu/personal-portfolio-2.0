@@ -40,7 +40,7 @@ function VoicenotedPostContent() {
                 <Section>
                     <Heading
                     style={{textTransform: "lowercase"}}>
-                        identifying the problem. //
+                        identifying the problem. 💭
                     </Heading>
                     <Paragraph>
                         <div className="paragraph">
@@ -115,7 +115,7 @@ function VoicenotedPostContent() {
                             padding: "0.5rem",
                             fontWeight: "bold",
                             marginRight: "1rem",}}>
-                            How can we integrate the notetaking component into the listening experience in an intuitive way?
+                            How can we integrate the notetaking component into a part of the podcast listening experience in an intuitive way?
                         </div>
                         <div 
                         className="paragraph"
@@ -139,10 +139,9 @@ function VoicenotedPostContent() {
                         className="quote" 
                         style={{
                             fontSize: "1.2rem", 
-                            padding: "5px", 
-                            paddingLeft: "25px", 
-                            marginRight: "135px",
-                            backgroundColor: "var(--blush)"}}>
+                            padding: "0.5rem",
+                            fontWeight: "bold",
+                            marginRight: "1rem",}}>
                             How can we organize previous voicenotes so that users can access them with ease?
                         </div>
                         <div 
@@ -164,10 +163,9 @@ function VoicenotedPostContent() {
                         className="quote" 
                         style={{
                             fontSize: "1.2rem", 
-                            padding: "5px", 
-                            paddingLeft: "25px", 
-                            marginRight: "105px",
-                            backgroundColor: "var(--blush)"}}>
+                            padding: "0.5rem",
+                            fontWeight: "bold",
+                            marginRight: "1rem",}}>
                             How can we help the users discover other contents that might be meaningful to them?
                         </div>
                         <div 

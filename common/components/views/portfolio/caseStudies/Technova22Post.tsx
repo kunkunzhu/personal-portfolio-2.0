@@ -48,7 +48,7 @@ const OptionButtons = styled.button`
     margin-top: 1rem;
     align-self: flex-start;
     border-radius: 20px;
-    border: 2px solid #333;
+    border: 2px solid var(--dark);
     padding: 0.5rem 1rem 0.5rem 1rem;
     text-decoration: none;
     background: inherit;
@@ -60,8 +60,8 @@ const OptionButtons = styled.button`
         margin-top: 0.9rem;
         font-size: 1.1rem;
         transition: 0.1s ease-out; 
-        color: white;
-        background: #333;
+        color: var(--light);
+        background: var(--dark);
     }
     cursor: crosshair;
 `
