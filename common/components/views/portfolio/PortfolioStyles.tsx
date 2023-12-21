@@ -5,12 +5,12 @@ import Link from "next/link";
 export const Header = styled.div`
     width: 70vw;
     margin: auto;
-    margin-top: 4rem;
+    margin-top: 6rem;
 
     .header {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
+        font-size: 2rem;
+        opacity: 0.5;
+        margin-bottom: 2rem;
         font-family: var(--title-font);
     }
 `
@@ -32,40 +32,42 @@ export const ProjectInfo = styled.div`
     justify-content: center;
 
     .subtitle {
+        font-family: var(--title-font);
         font-size: 1rem;
         opacity: 0.5;
     }
     .title {
-        font-family: var(--title-font);
         text-transform: uppercase;
         font-size: 2.5rem;
         margin-bottom: 0.8rem;
         font-weight: 600;
     }
     .description {
+        font-family: var(--title-font);
         font-size: 1.2rem;
     }
     .link {
         margin-top: 1.5rem;
         align-self: flex-start;
         border-radius: 20px;
-        border: 2px solid var(--dark);
+        color: var(--outline-color);
+        border: 2px solid var(--outline-color);
         padding: 0.5rem 1rem 0.5rem 1rem;
         text-decoration: none;
         background: inherit;
         font-family: inherit;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     span {
         opacity: 0.5;
     }
     button {
         &:hover {
-            margin-top: 1rem;
+            margin-top: 1.2rem;
             font-size: 1.5rem;
             transition: 0.1s ease-out; 
-            color: var(--light);
-            background: var(--dark);
+            color: var(--body-color);
+            background: var(--outline-color);
             border-radius: 10rem;
         }
         cursor: crosshair;
@@ -76,7 +78,7 @@ export const ProjectImage = styled.img`
     width: 25rem;
     height: 100%;
     object-fit: contain;
-    border: 2px solid var(--dark);
+    border: 2px solid var(--outline-color);
     border-radius: 15px;
     padding: 0.5rem;
 `
@@ -121,7 +123,6 @@ export const ExpPilLWrapper = styled.div`
     padding: 1rem 1.5rem 1rem 1.5rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     * {
         font-size: 0.8rem;
     }
@@ -136,6 +137,7 @@ export const ExpTitle = styled.div`
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+    width: 50%;
     .role {
         font-weight: bold;
     }

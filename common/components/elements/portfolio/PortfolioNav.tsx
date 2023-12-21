@@ -12,7 +12,7 @@ const BrowserBar = styled.div`
     flex-direction: row;
     justify-content: space-between;
     padding: 0.5rem 1rem 0.5rem 1rem;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid;
     height: 3rem;
 `
 
@@ -35,15 +35,16 @@ const NavItem = styled(Link)`
     font-size: 1rem;
     font-family: var(--title-font);
     padding: 0.5rem 2rem 0.5rem 2rem;
-    text-transform: uppercase;
-    border: 2px solid black;
+    text-transform: capitalize;
+    border: 2px solid;
+    border-bottom: 0;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     vertical-align: baseline;
 
     :hover {
-        background: var(--dark);
-        color: var(--light);
+        background: var(--outline-color);
+        color: var(--body-color);
         cursor: crosshair
     }
 `
@@ -53,9 +54,9 @@ export default function PortfolioNav() {
     const renderBrowserBar = () => {
         return (
             <BrowserIcons>
-                <AiOutlineMinusCircle size={25} color={'black'}/>
-                <AiOutlinePlusCircle size={25} color={'black'}/>
-                <AiOutlineCloseCircle size={25} color={'black'}/>
+                <AiOutlineMinusCircle size={25} color={'var(--outline-color)'}/>
+                <AiOutlinePlusCircle size={25} color={'var(--outline-color)'}/>
+                <AiOutlineCloseCircle size={25} color={'var(--outline-color)'}/>
             </BrowserIcons>
         )
     }
@@ -77,13 +78,13 @@ export default function PortfolioNav() {
                     <NavItem
                     href="/portfolio/misc" 
                     >
-                    experiences
+                    Experiences
                     </NavItem>
                     <NavItem
                     href="/resume.pdf"
                     target="_blank"
                     >
-                    resume
+                    Resume
                     </NavItem>
                 </div>
             </NavWrapper>

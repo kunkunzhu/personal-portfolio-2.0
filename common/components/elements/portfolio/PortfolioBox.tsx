@@ -10,7 +10,7 @@ import {
 const BrowserBox = styled.div`
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
+    border: 2px solid;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -24,7 +24,7 @@ const SearchWrapper = styled.div`
     display: grid;
     grid-template-columns: 5rem auto;
     gap: 10rem;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid;
     padding: 0.2rem;
 
     .navigation {
@@ -34,7 +34,7 @@ const SearchWrapper = styled.div`
 
     .search {
         border-radius: 1rem;
-        border: 2px solid black;
+        border: 2px solid;
         margin-right: 2rem;
         height: 2rem;
         padding-left: 0.5rem;
@@ -68,11 +68,11 @@ const BrowserSearchBar = () => {
     return (
         <SearchWrapper>
             <div className="navigation">
-                <AiOutlineLeftCircle size={25} color={'black'}/>
-                <AiOutlineRightCircle size={25} color={'black'}/>
+                <AiOutlineLeftCircle size={25} color={'var(--outline-color)'}/>
+                <AiOutlineRightCircle size={25} color={'var(--outline-color)'}/>
             </div>
             <div className="search">
-                <AiOutlineSearch size={20} color={'black'} className="icon" />
+                <AiOutlineSearch size={20} color={'var(--outline-color)'} className="icon" />
             </div>
         </SearchWrapper>
     )

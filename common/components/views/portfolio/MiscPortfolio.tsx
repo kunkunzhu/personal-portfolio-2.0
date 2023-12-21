@@ -38,7 +38,7 @@ const ExpPill = ({ exp } : { exp: any }) => {
                 <div className="org">{exp.org}</div>
             </ExpTitle>
             <ExpDescription>
-                <div className="tagline">{exp.tagline}</div>
+                <div className="tagline">{exp.tagline}.</div>
             </ExpDescription>
         </ExpPilLWrapper>
     )

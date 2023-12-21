@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
     width: 100%;
-    background-color: #333;
+    background-color: var(--dark);
     opacity: 75%;
     display: flex;
     text-align: center;
     flex-direction: column;
     justify-content: center;
     .text{
-        color: white;
+        color: var(--dark);
     }
 `
 
