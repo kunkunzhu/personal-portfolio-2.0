@@ -1,25 +1,55 @@
-import React from "react";
-import styled from "styled-components";
+import React,  { useState } from "react";
+import styled, { useTheme } from "styled-components";
 import Link from "next/link";
+import { ThemeToggle } from "./ThemeToggle";
 
 const NavWrapper = styled.div`
     display: flex;
     flex-direction: row;
+    padding: 2rem 2rem 1rem 2rem;   
     justify-content: space-between;
-    padding: 1.6rem;
     width: 90vw;
     margin: auto;
 `
 
-const NavItem = styled(Link)`
+const TabsWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
 `
 
-export default function Nav() {
+const NavItem = styled(Link)`
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    font-family: var(--title-font);
+    :hover {
+        cursor: crosshair;
+    }
+`
+
+interface NavProps {
+    onThemeChange: (isDark: boolean) => void;
+}
+
+export const Nav = (props: NavProps) => {
+
+    const [darkMode, setDarkMode] = useState<boolean>(false)
+
+    const setDisplayMode = (isDark: boolean) => {
+        setDarkMode(isDark)
+        props.onThemeChange(isDark)
+    }
     
     return (
         <NavWrapper>
-            <NavItem href="/">About</NavItem>
-            <NavItem href="/portfolio/design">Portfolio</NavItem>
+            <TabsWrapper>
+                <NavItem href="/">About</NavItem>
+                <NavItem href="/portfolio/design">Portfolio</NavItem>
+            </TabsWrapper>
+            <ThemeToggle
+                toggled={darkMode}
+                onClick={setDisplayMode}
+                />
         </NavWrapper>
     )
 }

@@ -1,5 +1,5 @@
 :root {
-  --dark: #333;
+  --dark: #0B0D23;
   --light: #FEFEFA;
 
   --text-font: 'Rubik', sans-serif;
@@ -20,24 +20,9 @@ body {
 
 body {
   font-family: var(--text-font);
-  color: var(--dark);
-  background-color: var(--light);
-  /* color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }

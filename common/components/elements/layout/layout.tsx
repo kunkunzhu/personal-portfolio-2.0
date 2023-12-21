@@ -1,11 +1,16 @@
 import React, { PropsWithChildren } from "react";
-import Nav from "../nav/Nav";
-// import Footer from "../footer/footer";
+import { Nav } from "../nav/Nav";
+import Footer from "../footer/footer";
 
-const AppLayout = ({ children }: PropsWithChildren) => {
+interface AppLayoutProps extends PropsWithChildren {
+  onThemeChange: (isDark: boolean) => void;
+}
+
+const AppLayout: React.FC<AppLayoutProps> = ({ children, onThemeChange }) => {
+
     return (
       <>
-        <Nav />
+        <Nav onThemeChange={onThemeChange}/>
         {children}
         {/* <Footer/> */}
       </>
