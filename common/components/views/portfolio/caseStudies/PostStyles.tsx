@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -34,6 +35,7 @@ export const Title = styled.div`
     }
     .subtitle {
         font-size: 1.2rem;
+        font-family: var(--title-font);
     }
 `
 
@@ -45,6 +47,80 @@ export const Summary = styled.header`
     justify-content: space-between;
 `
 
+export const NutshellWrapper = styled.div`
+    display: flex;
+    justify-content: space-between; 
+    padding-top: 2rem;
+    gap: 2rem;
+`
+
+export const NutshellCol = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .title {
+        font-weight: bold;
+        font-size: 1.2rem;
+        font-family: var(--title-font);
+        padding-bottom: 1rem;
+        
+        hr {
+            margin-top: 1rem;
+            width: 75%
+        }
+    }
+    ul {
+        list-style-type: none;
+        li {
+            opacity: 0.7;
+            padding-bottom: 0.5rem;
+        }
+    }
+`
+
+interface NutshellProps {
+    timeline: string;
+    role: string;
+    team: string[];
+}
+
+export const Nutshell = (props: NutshellProps) => {
+
+    const TeamDisplay = (team: string[]) => {
+        let teamArray : Array<ReactNode> = []
+        team.map((team_member) => (
+            teamArray.push(
+                <li>{team_member}</li>
+            )
+        ))
+        return (
+            <ul>
+                {teamArray}
+            </ul>
+        )
+    }
+    
+    return (
+        <NutshellWrapper>
+            <NutshellCol>
+                <div className="title">Team<hr/></div>
+                <div className="content">
+                    {TeamDisplay(props.team)}
+                </div>
+            </NutshellCol>
+            <NutshellCol>
+                <div className="title">Role<hr/></div>
+                <div className="content">{props.role}</div>
+            </NutshellCol>
+            <NutshellCol>
+                <div className="title">Timeline<hr/></div>
+                <div className="content">{props.timeline}</div>
+            </NutshellCol>
+        </NutshellWrapper>
+    )
+}
+
 /* CONTENT STYLE */
 
 export const Content = styled.div`
@@ -52,8 +128,9 @@ export const Content = styled.div`
 
 export const Paragraph = styled.div`
     .subheading {
-        font-size: 1.2rem;
-        padding: 2rem 1.5rem 0 0;
+        font-family: var(--title-font);
+        font-size: 1.5rem;
+        padding: 2.5rem 1.5rem 1.5rem 0;
     }
     .subsubheading {
         font-size: 1.2rem;
@@ -71,6 +148,7 @@ export const Paragraph = styled.div`
         background-color: var(--rain);
         padding: 15px;
         padding-left: 50px;
+        font-family: var(--title-font);
     }
     .paragraph {
         font-size: 0.9rem;
@@ -122,17 +200,18 @@ export const Paragraph = styled.div`
 `
 
 export const Heading = styled.h3`
-    margin: 0.5rem;
+    margin: 2rem;
     margin-left: 0;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    font-family: var(--title-font);
     text-transform: uppercase;
 `
 
 export const SectionDivider = styled.hr`
     margin-top: 1rem;
     border: 0;
-    border-top: 0.5px solid black;
+    border-top: 0.5px solid;
     opacity: 0.3;
 `
 

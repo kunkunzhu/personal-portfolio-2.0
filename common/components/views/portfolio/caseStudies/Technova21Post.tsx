@@ -8,7 +8,8 @@ import {
     Paragraph,
     Section,
     SectionDivider,
-    Wrapper
+    Wrapper,
+    Nutshell
  } from './PostStyles'
 
 function Technova21PostContent() {
@@ -41,6 +42,16 @@ function Technova21PostContent() {
                         deliver the website design, and create social media content for this event.
                     </div>
                 </Paragraph>
+                <Nutshell
+                    timeline="May - Aug 2021 (3 months)"
+                    team={[ 
+                    "Amy (Web Developer)",
+                    "Jasmine (Product Manager)", 
+                    "Annette (Marketing Coordinator)",
+                    "Alex, Tianke, Kayley (Graphic Designers)", 
+                    "Brittney (UX & Graphic Designer)"]}
+                    role="UX Designer, Graphic Designer"
+                    />
             </Section>
             <SectionDivider/>
             <Section>

@@ -8,7 +8,8 @@ import {
     Paragraph,
     Section,
     SectionDivider,
-    Wrapper
+    Wrapper,
+    Nutshell
  } from './PostStyles'
 
 function VoicenotedPostContent() {
@@ -33,8 +34,14 @@ function VoicenotedPostContent() {
                             individuals to build a digital product within the time constraint of 36 hours. 
                             As a team, we worked together for the first time to ideate the product, create 
                             the prototype, implement the functionalities, and finally present our pitch.
+                            In the end, we were selected as a <b>winner</b>!
                         </div>
                     </Paragraph>
+                    <Nutshell
+                        timeline="Sept 17-19, 2021 (36 hours)"
+                        role="UX Designer"
+                        team={["Jacquelyn (UX Designer)", "Max (Backend Developer)", "Emily (Fullstack Developer)"]}
+                    />
                 </Section>
                 <SectionDivider/>
                 <Section>
@@ -108,20 +115,14 @@ function VoicenotedPostContent() {
                             Three tabs are created to capture these functionalities.
                             For each tab, a specific design question is asked:
                         </div>
-                        <div 
-                        className="quote" 
-                        style={{
-                            fontSize: "1.2rem", 
-                            padding: "0.5rem",
-                            fontWeight: "bold",
-                            marginRight: "1rem",}}>
+                        <div className="quote" >
                             How can we integrate the notetaking component into a part of the podcast listening experience in an intuitive way?
                         </div>
                         <div 
                         className="paragraph"
                         style={{
                             fontSize: "0.9rem", 
-                            paddingLeft: "2.5rem",
+                            paddingLeft: "10rem",
                             paddingTop: "0"
                         }}>
                             The <b>Listen Tab</b> allows the user to listen to podcast episodes and write voicenotes.
@@ -135,20 +136,14 @@ function VoicenotedPostContent() {
                             Audio transcript will be automatically transcribed with the podcast name, episode, and timestamp 
                             displaying underneath. However, if there exists an error in the generated transcript, user could edit it.
                         </div>
-                        <div 
-                        className="quote" 
-                        style={{
-                            fontSize: "1.2rem", 
-                            padding: "0.5rem",
-                            fontWeight: "bold",
-                            marginRight: "1rem",}}>
+                        <div className="quote" >
                             How can we organize previous voicenotes so that users can access them with ease?
                         </div>
                         <div 
                         className="paragraph"
                         style={{
                             fontSize: "0.9rem", 
-                            paddingLeft: "2.5rem",
+                            paddingLeft: "15rem",
                             paddingTop: "0"
                         }}>
                             All voicenotes are organized in a <b>Library tab</b>. Initially created voicenotes are 
@@ -159,20 +154,14 @@ function VoicenotedPostContent() {
                             Other than that, one can also create customized albums to organize their voicenotes in
                             the way they desire.
                         </div>
-                        <div 
-                        className="quote" 
-                        style={{
-                            fontSize: "1.2rem", 
-                            padding: "0.5rem",
-                            fontWeight: "bold",
-                            marginRight: "1rem",}}>
+                        <div className="quote" >
                             How can we help the users discover other contents that might be meaningful to them?
                         </div>
                         <div 
                         className="paragraph"
                         style={{
                             fontSize: "0.9rem", 
-                            paddingLeft: "2.5rem",
+                            paddingLeft: "25rem",
                             paddingTop: "0"
                         }}>
                             We imagined that community-based learning can be facilitated if a user can make a voicenote 

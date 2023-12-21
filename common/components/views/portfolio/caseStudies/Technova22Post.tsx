@@ -11,6 +11,7 @@ import {
     Section,
     SectionDivider,
     Wrapper,
+    Nutshell,
 } from './PostStyles'
 
 const ImagesRow = styled.div`
@@ -48,7 +49,8 @@ const OptionButtons = styled.button`
     margin-top: 1rem;
     align-self: flex-start;
     border-radius: 20px;
-    border: 2px solid var(--dark);
+    border: 2px solid var(--outline-color);
+    color: var(--body-color);
     padding: 0.5rem 1rem 0.5rem 1rem;
     text-decoration: none;
     background: inherit;
@@ -56,12 +58,14 @@ const OptionButtons = styled.button`
     font-size: 1rem;
     text-transform: uppercase;
     width: 25%;
+    font-family: var(--title-font);
+    
     &:hover {
         margin-top: 0.9rem;
         font-size: 1.1rem;
         transition: 0.1s ease-out; 
-        color: var(--light);
-        background: var(--dark);
+        color: var(--body-color);
+        background: var(--outline-color);
     }
     cursor: crosshair;
 `
@@ -222,24 +226,36 @@ function Technova22PostContent() {
                             May to August 2022, I had the opportunity to lead a very talented team of designers 
                             to see through the fruition of another successful event :)
                         </div>
-                        <div className="paragraph">
-                            Click below to view more!
-                        </div>
+                        <Nutshell
+                        role="Product Manager, UX Designer, Graphic Designer"
+                        team={[
+                            "Tianke, Cat, Grace, Ananya, Chatumini (Designers)", 
+                            "Amanda, Kelly, Mahzabin (Web Developers)",
+                            "Elizabeth (Marketing Lead)"
+                        ]}
+                        timeline="April - Aug 2022 (4 months)"
+                        />
+                        <SectionDivider/>
+                        <Paragraph>
+                            <div className="paragraph">
+                                Click below to view more!
+                            </div>
+                        </Paragraph>
+                        <ButtonRow>
+                            <OptionButtons onClick={() => setDisplayProjects(true)}>
+                                design projects
+                            </OptionButtons>
+                            <OptionButtons onClick={() => setDisplayProjects(false)}>
+                                reflection
+                            </OptionButtons>
+                            <OptionButtons>
+                                <Link href="/portfolio/design/technova21">
+                                    Technova 2022
+                                </Link>
+                            </OptionButtons>
+                        </ButtonRow>
                     </Paragraph>
-                    <ButtonRow>
-                        <OptionButtons onClick={() => setDisplayProjects(true)}>
-                            design projects
-                        </OptionButtons>
-                        <OptionButtons onClick={() => setDisplayProjects(false)}>
-                            reflection
-                        </OptionButtons>
-                        <OptionButtons>
-                            <Link href="/portfolio/design/technova21">
-                                Technova 2022
-                            </Link>
-                        </OptionButtons>
-                    </ButtonRow>
-                </Section>
+                    </Section>
                 <SectionDivider/>
             </Wrapper>
             {displayProjects ?

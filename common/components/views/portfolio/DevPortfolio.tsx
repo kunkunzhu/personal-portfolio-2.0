@@ -57,7 +57,7 @@ const ProjectImage = styled.img`
     width: 26rem;
     height: 14.5rem;
     object-fit: cover;
-    border: 2px solid black;
+    border: 2px solid;
     border-radius: 15px;
     padding: 0.2rem;
 `
