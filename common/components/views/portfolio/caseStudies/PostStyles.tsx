@@ -136,7 +136,7 @@ export const Paragraph = styled.div`
         font-size: 1.2rem;
         padding: 1rem 0 0 0.5rem;
         text-transform: uppercase;
-        color: pink;
+        color: var(--highlight);
         opacity: 0.75;
     }
     .quote {
@@ -144,8 +144,7 @@ export const Paragraph = styled.div`
         margin-bottom: 0.5rem;
         font-size: 2rem;
         line-height: 2rem;
-        color: var(--bg-clr);
-        background-color: var(--rain);
+        color: var(--highlight);
         padding: 15px;
         padding-left: 50px;
         font-family: var(--title-font);
@@ -156,7 +155,7 @@ export const Paragraph = styled.div`
         b {
             font-family: inherit;
             &:hover {
-                color: pink;
+                color: var(--highlight);
             }
         }
         a {
@@ -167,7 +166,7 @@ export const Paragraph = styled.div`
             &:hover {
                 text-decoration: underline;
                 text-decoration-style: wavy;
-                text-decoration-color: blue;
+                text-decoration-color: var(--highlight);
             }
         }
         ol {

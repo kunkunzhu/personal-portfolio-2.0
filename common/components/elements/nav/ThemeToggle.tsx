@@ -52,7 +52,7 @@ const ToggleWrapper = styled.div`
         display: block;
         width: 1.8rem;
         margin: 0.2rem;
-        background: var(--dark);
+        background: var(--highlight);
         position: absolute;
         top: 0;
         bottom: 0;

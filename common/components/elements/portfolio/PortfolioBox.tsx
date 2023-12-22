@@ -15,8 +15,8 @@ const BrowserBox = styled.div`
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 1rem;
-    height: 90vh;
-    width: 90vw;
+    height: 85vh;
+    width: 85vw;
     margin: auto;
 `
 
@@ -49,7 +49,7 @@ const SearchWrapper = styled.div`
 
 const PortfolioContent = styled.div`
     overflow-y: scroll;
-    margin: 0rem 0.5rem 1rem 0.5rem;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
     border-radius: 1rem;
     
     ::-webkit-scrollbar {
@@ -57,8 +57,7 @@ const PortfolioContent = styled.div`
     }
 
     ::-webkit-scrollbar-thumb {
-        background-color: var(--light);
-        outline: 2px solid var(--dark);
+        background-color: var(--highlight);
         border-radius: 15px;
       }
 `

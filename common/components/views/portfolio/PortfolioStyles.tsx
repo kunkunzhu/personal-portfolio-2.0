@@ -5,12 +5,11 @@ import Link from "next/link";
 export const Header = styled.div`
     width: 70vw;
     margin: auto;
-    margin-top: 6rem;
+    margin-top: 2rem;
 
     .header {
-        font-size: 2rem;
-        opacity: 0.5;
-        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        color: var(--highlight);
         font-family: var(--title-font);
     }
 `
@@ -32,18 +31,16 @@ export const ProjectInfo = styled.div`
     justify-content: center;
 
     .subtitle {
-        font-family: var(--title-font);
         font-size: 1rem;
-        opacity: 0.5;
     }
     .title {
         text-transform: uppercase;
         font-size: 2.5rem;
         margin-bottom: 0.8rem;
         font-weight: 600;
+        font-family: var(--title-font);
     }
     .description {
-        font-family: var(--title-font);
         font-size: 1.2rem;
     }
     .link {
