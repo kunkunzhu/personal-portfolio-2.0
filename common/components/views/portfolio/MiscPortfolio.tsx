@@ -56,16 +56,6 @@ export default function MiscPortfolio() {
         return expsArray
     }
 
-    // const renderYear = (yearExps: Experience[]) => {
-    //     let expYearArray : Array<ReactNode> = []
-    //     yearExps.forEach((exp) => {
-    //         expYearArray.push(
-    //             <
-    //         )
-    //     })
-    //     return expYearArray
-    // }
-
     const renderYears = (expData: YearExperiencesDataInterface) => {
         const expYears = Object.values(expData)
         let expYearsArray : Array<ReactNode> = []
@@ -88,10 +78,9 @@ export default function MiscPortfolio() {
             <PortfolioBox>
                 <Header>
                     <div className="header">
-                        welcome! I'm kun •ᴗ•
-                    </div>
-                    <div className="about">
-                        catch a glimpse into what I've been up to outside of work:
+                        {/* Click around to discover what I’ve been up to in and out of work — 
+                        the spaces I’ve been exploring & the communities I’ve been a part of. 
+                        Alternatively, grab a copy of my resume here •ᴗ• */}
                     </div>
                 </Header>
                 <AllExpWrapper>

@@ -68,12 +68,8 @@ export default function DesignPortfolio() {
             <PortfolioBox>
                 <Header>
                     <div className="header">
-                        welcome! I'm kun •ᴗ•
-                    </div>
-                    <div className="about">
-                        an aspiring creative technologist
-                        eager to craft experiences that evoke 
-                        curiosity and delight.
+                    {/* As a self-taught designer, I aspire to integrate empathy and creativity  
+                    in order to craft digital experiences that evoke curiosity and delight. */}
                     </div>
                 </Header>
                 {renderDesignProjects()}

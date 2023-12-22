@@ -5,7 +5,7 @@ const designData = {
         title: "TechNova 2022",
         subtitle: "Designing for Hackathon",
         description: "Evolving the visual experience of UWaterloo's gender empowerment hackathon.",
-        prompt: "behind the scene",
+        prompt: "work in progress",
         link: "/portfolio/design/technova22"
     },
     voicenoted: {
@@ -32,7 +32,7 @@ const designData = {
         title: "Moodment",
         subtitle: "Personal Project",
         description: "Cultivating emotional literacy through mindful awareness.",
-        prompt: "case study",
+        prompt: "work in progress",
         link: "/portfolio/design/moodment"
     },
     // frui: {

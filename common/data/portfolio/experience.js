@@ -83,7 +83,7 @@ const expData = {
                 key: "technova2",
                 role: "Design Lead",
                 org: "TechNova",
-                tagline: "launching various creative projects for a gender empowerment hackathon",
+                tagline: "spearheading creative projects for a global gender empowerment hackathon",
                 link: null,
                 internship: false
             },

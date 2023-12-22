@@ -16,7 +16,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   const onThemeChange = (isDark: boolean) => {
     isDark ? setTheme('dark') : setTheme('light')
-    console.log("theme: ", theme)
   }
   
 
