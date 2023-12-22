@@ -12,7 +12,7 @@ const AppLayout: React.FC<AppLayoutProps> = ({ children, onThemeChange }) => {
       <>
         <Nav onThemeChange={onThemeChange}/>
         {children}
-        {/* <Footer/> */}
+        <Footer/>
       </>
     );
 };
