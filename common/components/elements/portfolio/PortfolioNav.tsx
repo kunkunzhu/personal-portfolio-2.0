@@ -1,5 +1,7 @@
 import React from "react";
 import styled  from "styled-components";
+import { useRouter } from 'next/router';
+import { NavItemProps } from "../nav/Nav";
 import Link from "next/link";
 import { 
     AiOutlineCloseCircle,
@@ -31,16 +33,19 @@ const NavWrapper = styled.div`
     }
 `
 
-const NavItem = styled(Link)`
+const NavItem = styled(Link)<NavItemProps>`
     font-size: 1rem;
-    font-family: var(--title-font);
     padding: 0.5rem 2rem 0.5rem 2rem;
-    text-transform: capitalize;
+    text-transform: uppercase;
     border: 2px solid;
     border-bottom: 0;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     vertical-align: baseline;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+
+    background-color: ${(props) => (props.$current ? 'var(--highlight)' : 'transparent')};
 
     :hover {
         background: var(--outline-color);
@@ -50,6 +55,10 @@ const NavItem = styled(Link)`
 `
 
 export default function PortfolioNav() {
+
+    const router = useRouter();
+    const isDesign = router.pathname.includes('design')
+    const isMisc = router.pathname.includes('misc')
 
     const renderBrowserBar = () => {
         return (
@@ -71,20 +80,16 @@ export default function PortfolioNav() {
                     dev
                     </NavItem> */}
                     <NavItem 
+                    $current={isDesign}
                     href="/portfolio/design" 
                     >
-                    design
+                    designs
                     </NavItem>
                     <NavItem
+                    $current={isMisc}
                     href="/portfolio/misc" 
                     >
                     Experiences
-                    </NavItem>
-                    <NavItem
-                    href="/resume.pdf"
-                    target="_blank"
-                    >
-                    Resume
                     </NavItem>
                 </div>
             </NavWrapper>
