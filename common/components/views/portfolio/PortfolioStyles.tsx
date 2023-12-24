@@ -1,17 +1,48 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Link from "next/link";
 
 // general styles
+const wobble = keyframes`
+  0%, 100% {
+    transform: translateY(0.2rem);
+  }
+  50% {
+    transform: translateY(-0.2rem); /* Adjust the distance to move up and down */
+  }
+`;
+
 export const Header = styled.div`
     width: 70vw;
-    margin: auto;
-    margin-top: 2rem;
+    margin: 4rem auto 1rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 
-    .header {
-        font-size: 1.5rem;
-        color: var(--highlight);
+    .title {
+        font-size: 2.4rem;
         font-family: var(--title-font);
+        .flora {
+            color: var(--highlight);
+        }
     }
+
+    .prompt {
+        font-size: 1.2rem;
+    }
+
+    hr {
+        margin-top: -2rem;
+        width: 40vw;
+        border: none;
+        height: 1px;
+        background-color: var(--highlight);
+    }
+`
+
+export const Arrow = styled.span`
+    display: inline-block;
+    color: var(--highlight);
+    animation: ${wobble} 1.5s ease-in-out infinite;
 `
 
 export const Wrapper = styled.div`
@@ -24,6 +55,15 @@ export const Wrapper = styled.div`
 `
 
 // DESIGN portfolio styles
+
+export const IconWrapper = {
+    outline: "2px solid var(--highlight)",
+    borderRadius: "10rem",
+    height: "2.8rem",
+    width: "2.8rem",
+    verticalAlign: "text-top",
+}  
+
 export const ProjectInfo = styled.div`
     display: flex;
     flex-direction: column;
@@ -103,7 +143,6 @@ export const AllExpWrapper = styled.div`
 export const ExpYearWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     display: inline-flex;
     .year {
         font-style: italic;
@@ -114,15 +153,16 @@ export const ExpYearWrapper = styled.div`
 `
 
 export const ExpPilLWrapper = styled.div`
-    border-radius: 5rem;
-    border: 2px solid var(--dark);
+    border-bottom: 2px solid var(--dark);
     word-wrap: break-word;
     padding: 1rem 1.5rem 1rem 1.5rem;
     display: flex;
     flex-direction: row;
+    
     * {
         font-size: 0.8rem;
     }
+
     &:hover {
         background: var(--dark);
         cursor: crosshair;
