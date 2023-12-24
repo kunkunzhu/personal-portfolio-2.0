@@ -7,28 +7,30 @@ import {
     Info,
     CollapsableText,
     CollapsedText,
+    InspoText
  } from "./AboutStyles";
 import Draggable from "react-draggable";
 import Image from "next/image";
-import * as myPics from "../../../images"
+import * as myPics from "../../../../public/aboutImages"
 
 const emojisLinks = new Map([
-    ['🎧', ['https://open.spotify.com/user/eliinaz.z?si=c08e9317db4e4a97']],
-    ['📷', ['https://www.instagram.com/kunleidoscope/']],
-    ['📝', ['https://www.notion.so/kunleidoscope/Study-Repository-9f179ada5dd34d64815ea99820ad8a4a']],
-    ['💼', ['https://www.linkedin.com/in/kun-zhu-05b53a193/']],
-    ['🎬', ['https://letterboxd.com/kunleidoscopic/']],
-    ['📚', ['https://www.goodreads.com/user/show/155344030-kun-zhu']],
+    ['🎧', ['https://open.spotify.com/user/eliinaz.z?si=c08e9317db4e4a97', 'where she creates oddly specific playlists']],
+    ['📷', ['https://www.instagram.com/kunleidoscope/', 'where she keeps a photographic archive']],
+    ['📝', ['https://www.notion.so/kunleidoscope/Study-Repository-9f179ada5dd34d64815ea99820ad8a4a', 'where she dumps all her study notes']],
+    ['💼', ['https://www.linkedin.com/in/kun-zhu-05b53a193/', "where she tries to find a job lol (& stalk other people's achievements)"]],
+    ['🎬', ['https://letterboxd.com/kunleidoscopic/', "where she logs the films she's seen"]],
+    ['📚', ['https://www.goodreads.com/user/show/155344030-kun-zhu', 'where she occasionally writes book reviews']],
     // ['🦜', ['']],
-    ['💌', ['https://sincerelykun.substack.com/']],
-    ['💬', ['mailto:zkzhu@uwaterloo.ca']]
+    ['🗺️', ['https://www.corner.inc/kun', 'where she documents her favourite places in different cities']],
+    ['💌', ['https://sincerelykun.substack.com/', "where she writes about what's been occupying her mind"]],
+    ['💬', ['mailto:zkzhu@uwaterloo.ca', 'where you can reach out to her about anything!']]
 ])
 
 const hobbies1: string[] = ['watching Studio Ghibli films', 'thrifting', 'scrap-journalling']
 const hobbies2: string[] = ['eating egg tarts', 'drinking rooibos tea', 'going out for brunch']
 
 
-const generateRandomItem = (arr: any[]) => {
+export const generateRandomItem = (arr: any[]) => {
     let max = arr.length 
     let idx = Math.floor(Math.random() * max);
 
@@ -38,7 +40,7 @@ const generateRandomItem = (arr: any[]) => {
 const renderEmojiStickers = () => {
 
     const getRandomPosition = (range: number, dimension: 'x' | 'y') => {
-        // make it avoid the text box??
+        // TODO: make the stickers avoid the textbox??
         let num = Math.random() * (range - 10) + 10;
         let dim;
         dimension == 'x' ? dim = 'vw' : dim = 'vh'
@@ -47,23 +49,34 @@ const renderEmojiStickers = () => {
         return position
     };
 
+    const navigateTo = (url: string) => {
+        window.open(url, '_blank');
+    };
+
     const emojis: string[] = Array.from(emojisLinks.keys());
 
     let emojiStickers : Array<ReactNode> = []
     emojis.map((emoji) => {
-        // direct on double click only??
         let info = emojisLinks.get(emoji)
-        let link
-        info ? link = info[0] : link = ''
+        let link = ''
+        let description = ''
+        if (info) {
+            link = info[0]
+            description = info[1]
+        }
         emojiStickers.push(
             <Draggable>
                 <EmojiSticker 
-                    y={getRandomPosition(80, 'y')} 
-                    x={getRandomPosition(80, 'x')}
-                    href={link}
-                    target='_blank' rel='noreferrer'
+                    y={getRandomPosition(70, 'y')} 
+                    x={getRandomPosition(70, 'x')}
+                    onDoubleClick={() => navigateTo(link)}
                 >
-                    {emoji}
+                    <div className="tooltip">
+                        {description}
+                    </div>
+                    <div className="emoji">
+                        {emoji}
+                    </div>
                 </EmojiSticker>
             </Draggable>
         )
@@ -78,6 +91,10 @@ function Workspace() {
     const [displayMajor, setDisplayMajor] = useState<boolean>(false)
     const [displayInspo, setDisplayInspo] = useState<boolean>(false)
     const [displayLinks, setDisplayLinks] = useState<boolean>(false)
+    const [specificInspo, setSpecificInspo] = useState<string>('')
+
+    // TODO: animiation for the word definitions
+    console.log(specificInspo)
 
     const [hobbies, setHobbies] = useState<string[]>([])
 
@@ -95,10 +112,12 @@ function Workspace() {
                     alt="Kun"
                     style={ImageWrapper}
                     placeholder="blur"
+                    quality={75}
                     />
                 <Info>
                     <div className="section">
-                        <CollapsableText collapse={displayName} onClick={() => setDisplayName(!displayName)}>Kun</CollapsableText> {displayName && <CollapsedText><i className="colored">/&thinsp; kwɪn &thinsp;/ &thinsp;</i></CollapsedText>}
+                        <CollapsableText collapse={displayName} onClick={() => setDisplayName(!displayName)}>Kun</CollapsableText> {displayName && <CollapsedText><i className="colored">/
+                        kwɪn / &thinsp;</i></CollapsedText>}
                         is in her final year at the University of Waterloo, 
                         studying <CollapsableText collapse={displayMajor} onClick={() => setDisplayMajor(!displayMajor)}>math</CollapsableText> 
                         {displayMajor && <CollapsedText> <span className="colored">(statistics & optimization)</span></CollapsedText>} with a minor in cognitive science.
@@ -106,9 +125,11 @@ function Workspace() {
                     </div>
                     <div className="section">
                         <CollapsableText collapse={displayInspo} onClick={() => setDisplayInspo(!displayInspo)}>Many</CollapsableText> things inspire her
-                        {displayInspo && <CollapsedText>, such as empathy, creativity, and interdisciplinarity</CollapsedText>}. 
+                        {displayInspo && <CollapsedText>, such as <InspoText onHover={() => setSpecificInspo('empathy')}>empathy</InspoText>,&thinsp;
+                        <InspoText onHover={() => setSpecificInspo('creativity')}>creativity</InspoText>, and&thinsp;
+                        <InspoText onHover={() => setSpecificInspo('interdisciplinarity')}>interdisciplinarity</InspoText></CollapsedText>}. 
                         She can also be found <CollapsableText collapse={displayLinks} onClick={() => setDisplayLinks(!displayLinks)}> elsewhere</CollapsableText>
-                        {displayLinks && <CollapsedText> by clicking around on these emojis •ᴗ•</CollapsedText>}.
+                        {displayLinks && <CollapsedText> by double clicking on these emojis •ᴗ•</CollapsedText>}.
                     </div>
                 </Info>
             </AboutWrapper>
