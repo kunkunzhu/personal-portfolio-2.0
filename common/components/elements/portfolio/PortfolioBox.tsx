@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import PortfolioNav from "./PortfolioNav";
 import styled from "styled-components";
 import {
@@ -47,10 +47,19 @@ const SearchWrapper = styled.div`
     }
 `
 
-const PortfolioContent = styled.div`
+interface PortfolioContentStyleProps {
+    $gifBackground: boolean
+}
+//https://i.pinimg.com/originals/64/ae/15/64ae1599d5869869610983f2f02db226.gif
+
+export const PortfolioContent = styled.div<PortfolioContentStyleProps>`
     overflow-y: scroll;
     margin: 0.5rem 0.5rem 1rem 0.5rem;
     border-radius: 1rem;
+    transition: background-image 0.5s ease;
+    background-image: ${(props) => (props.$gifBackground ? "url('https://i.pinimg.com/originals/80/e5/b5/80e5b5070a9a15dab79fe8d8f27378cc.gif')" : 'none')};
+    background-repeat: no-repeat;
+    background-size: 100%;
     
     ::-webkit-scrollbar {
         width: 0.7em;
@@ -59,7 +68,7 @@ const PortfolioContent = styled.div`
     ::-webkit-scrollbar-thumb {
         background-color: var(--highlight);
         border-radius: 15px;
-      }
+    }
 `
 
 
@@ -77,17 +86,24 @@ const BrowserSearchBar = () => {
     )
 }
 
-export default function PortfolioBox({ children } : { children: ReactNode } ) {
+interface PortfolioBoxProps {
+    children: ReactNode;
+    gifBackground: boolean;
+}
+
+const PortfolioBox: React.FC<PortfolioBoxProps> = ({ children, gifBackground }) => {
 
     return (
         <div>
             <BrowserBox>
                 <PortfolioNav/>
                 <BrowserSearchBar/>
-                <PortfolioContent>
+                <PortfolioContent $gifBackground={gifBackground}>
                     {children}
                 </PortfolioContent>
             </BrowserBox>
         </div>
     )
 }
+
+export default PortfolioBox
