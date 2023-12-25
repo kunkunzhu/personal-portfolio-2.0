@@ -11,6 +11,7 @@ import {
  } from "./AboutStyles";
 import Draggable from "react-draggable";
 import Image from "next/image";
+import { generateRandomItem } from "../../../utils/random";
 import * as myPics from "../../../../public/aboutImages"
 
 const emojisLinks = new Map([
@@ -28,14 +29,6 @@ const emojisLinks = new Map([
 
 const hobbies1: string[] = ['watching Studio Ghibli films', 'thrifting', 'scrap-journalling']
 const hobbies2: string[] = ['eating egg tarts', 'drinking rooibos tea', 'going out for brunch']
-
-
-export const generateRandomItem = (arr: any[]) => {
-    let max = arr.length 
-    let idx = Math.floor(Math.random() * max);
-
-    return arr[idx]
-}
 
 const renderEmojiStickers = () => {
 
