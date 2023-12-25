@@ -99,7 +99,7 @@ export default function DevPortfolio() {
 
     return (
         <div>
-            <PortfolioBox>
+            <PortfolioBox gifBackground={false}>
                 <Header>
                     <div className="header">
                         welcome! I'm kun •ᴗ•
