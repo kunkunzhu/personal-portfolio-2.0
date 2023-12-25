@@ -103,7 +103,7 @@ export default function MiscPortfolio() {
                     <div className="prompt">
                         For work-related experiences, grab a copy of her resume <a href="/resume.pdf" target="_blank">here</a>. <br/>
                         Alternatively, check out the spaces she’s been exploring & the communities she’s been a part of &ensp;
-                        <Arrow>↓</Arrow>
+                        <Arrow className="flora">↓</Arrow>
                     </div>
                     <hr/>
                 </Header>

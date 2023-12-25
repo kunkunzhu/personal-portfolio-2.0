@@ -60,6 +60,10 @@ export const PortfolioContent = styled.div<PortfolioContentStyleProps>`
     background-image: ${(props) => (props.$gifBackground ? "url('https://i.pinimg.com/originals/80/e5/b5/80e5b5070a9a15dab79fe8d8f27378cc.gif')" : 'none')};
     background-repeat: no-repeat;
     background-size: 100%;
+
+    .flora {
+        color: ${(props) => (props.$gifBackground ? "var(--body-color)" : 'var(--highlight)')};
+    }
     
     ::-webkit-scrollbar {
         width: 0.7em;

@@ -26,10 +26,6 @@ export const Header = styled.div`
         font-weight: 500;
         margin-bottom: 4rem;
 
-        .flora {
-            color: var(--highlight);
-        }
-
         .circle {
             border-radius: 100%;
             border: 2px solid var(--highlight);
@@ -60,7 +56,6 @@ export const Header = styled.div`
 
 export const Arrow = styled.span`
     display: inline-block;
-    color: var(--highlight);
     animation: ${wobble} 1.5s ease-in-out infinite;
 `
 

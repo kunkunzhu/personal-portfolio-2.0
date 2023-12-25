@@ -78,7 +78,7 @@ export default function DesignPortfolio() {
                     </div>
                     <div className="prompt">
                         Scroll to check out her past design work &ensp;
-                        <Arrow>↓</Arrow>
+                        <Arrow className="flora">↓</Arrow>
                     </div>
                     <hr/>
                 </Header>
