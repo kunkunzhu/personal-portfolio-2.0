@@ -44,6 +44,7 @@ const NavItem = styled(Link)<NavItemProps>`
     vertical-align: baseline;
     letter-spacing: 0.1rem;
     font-weight: 700;
+    white-space: nowrap;
 
     background-color: ${(props) => (props.$current ? 'var(--highlight)' : 'transparent')};
 
@@ -83,7 +84,7 @@ export default function PortfolioNav() {
                     $current={isDesign}
                     href="/portfolio/design" 
                     >
-                    designs
+                    designs 
                     </NavItem>
                     <NavItem
                     $current={isMisc}

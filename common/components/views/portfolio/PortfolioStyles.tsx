@@ -13,28 +13,47 @@ const wobble = keyframes`
 
 export const Header = styled.div`
     width: 70vw;
-    margin: 4rem auto 1rem auto;
+    margin: 6rem auto 0 auto;
     display: flex;
+    height: 50vh;
     flex-direction: column;
-    gap: 4rem;
+    justify-content: space-between;
 
     .title {
-        font-size: 2.4rem;
+        width: 65vw;
+        font-size: 3rem;
         font-family: var(--title-font);
+        font-weight: 500;
+        margin-bottom: 4rem;
+
         .flora {
             color: var(--highlight);
         }
+
+        .circle {
+            border-radius: 100%;
+            border: 2px solid var(--highlight);
+            padding: 0 1rem 0 1rem;
+            display: inline-block;
+            cursor: crosshair;
+        }
+
     }
+
 
     .prompt {
         font-size: 1.2rem;
+
+        a {
+            cursor: crosshair;
+            text-decoration: underline solid var(--highlight);
+        }
     }
 
     hr {
-        margin-top: -2rem;
-        width: 40vw;
+        margin-top: -3rem;
         border: none;
-        height: 1px;
+        height: 2px;
         background-color: var(--highlight);
     }
 `
@@ -125,7 +144,8 @@ export const ProjectWrapper = styled.div`
     flex-direction: row;
     width: 70vw;
     margin: auto;
-    padding-top: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
 `
 
 export const ProjectLink = styled(Link)``
@@ -134,30 +154,39 @@ export const ProjectLink = styled(Link)``
 export const AllExpWrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: 80%;
-    margin: auto;
-    gap: 2rem;
-    padding: 5rem 0 5rem 0;
+    width: 75vw;
+    margin: 4rem auto 2rem auto;
 `
 
 export const ExpYearWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
     display: inline-flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
     .year {
-        font-style: italic;
-        font-size: 1.5rem;
-        opacity: 0.5;
-        font-family: var(--title-font);
+        text-orientation: upright;
+        writing-mode: vertical-rl;
+        white-space: nowrap;
+        letter-spacing: -0.2rem;
+        color: var(--highlight);
+        font-size: 0.8rem;
+    }
+    .exp {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
     }
 `
 
 export const ExpPilLWrapper = styled.div`
-    border-bottom: 2px solid var(--dark);
-    word-wrap: break-word;
+    border-bottom: 2px solid var(--outline-color);
+    border-left: 2px solid var(--outline-color);
     padding: 1rem 1.5rem 1rem 1.5rem;
-    display: flex;
-    flex-direction: row;
+
+    .text {
+        display: flex;
+        flex-direction: row;
+    }
     
     * {
         font-size: 0.8rem;
@@ -167,23 +196,45 @@ export const ExpPilLWrapper = styled.div`
         background: var(--dark);
         cursor: crosshair;
         transition: 0.1s ease-out; 
+        border-bottom-right-radius: 1rem;
         color: var(--light);
     }
+
+    .images: {
+        display: none;
+    }
+
 `
 export const ExpTitle = styled.div`
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
     width: 50%;
+    
     .role {
         font-weight: bold;
     }
     .org {
         font-style: italic;
     }
+
+    a {
+        cursor: crosshair;
+        text-decoration: underline solid var(--highlight);
+    }
 `
 
 export const ExpDescription = styled.div`
     opacity: 0.5
 `   
+
+export const ClubImageWrapper = {
+    border: "2px solid var(--outline-color)",
+    borderRadius: "0.5rem",
+    height: "100%",
+    width: "100%",
+    maxWidth: "5rem",
+    maxHeight: "auto",
+    padding: "0.1rem",
+}  
 

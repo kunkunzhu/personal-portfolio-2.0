@@ -1,5 +1,6 @@
-import React, {ReactNode} from "react";
+import React, {ReactNode, useState} from "react";
 import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
+import IconFrame from "@/common/components/elements/portfolio/IconFrame";
 import designData from "@/common/data/portfolio/design.js"
 import { 
     ProjectWrapper,
@@ -7,12 +8,8 @@ import {
     ProjectInfo,
     ProjectLink,
     Header,
-    IconWrapper,
     Arrow
- } from "./PortfolioStyles";
- import Image from "next/image";
- import * as myPics from "../../../../public/aboutImages"
-import { generateRandomItem } from "../about/About";
+} from "./PortfolioStyles";
 
 interface DesignProjects {
     key: string,
@@ -22,20 +19,6 @@ interface DesignProjects {
     description: string,
     prompt: string,
     link: string | null,
-}
-
-const iconFrame = () => {
-    const myPicsArray = Object.values(myPics);
-
-    return (
-        <Image
-            src={generateRandomItem(myPicsArray)}
-            alt="Kun"
-            style={IconWrapper}
-            placeholder="blur"
-            quality={75}
-        />
-    )
 }
 
 const ProjectBox = ({ project }:{ project: DesignProjects }) => {
@@ -71,6 +54,8 @@ const ProjectBox = ({ project }:{ project: DesignProjects }) => {
 
 export default function DesignPortfolio() {
 
+    const [isGif, setIsGif] = useState(false)
+
     const renderDesignProjects = () => {
         const projects = Object.values(designData)
         let projectsArray : Array<ReactNode> = []
@@ -84,14 +69,15 @@ export default function DesignPortfolio() {
 
     return (
         <div>
-            <PortfolioBox>
+            <PortfolioBox gifBackground={isGif}>
                 <Header>
                     <div className="title">
-                        Kun <span className="flora">{iconFrame()}</span> is a curiosity-driven designer <span className="flora">✺</span> aspiring to craft 
-                        digital experiences that evoke curiosity and delight <span className="flora">✹˖꙳</span>
+                        Kun <span className="flora">{IconFrame()}</span> is a curiosity-driven
+                        <span className="circle" onMouseEnter={() => setIsGif(true)} onMouseLeave={() => setIsGif(false)}>designer</span> aspiring to craft 
+                        digital experiences that evoke curiosity <span className="flora">✺</span> and delight <span className="flora">✹˖꙳</span>
                     </div>
                     <div className="prompt">
-                        Scroll to check out her design work &ensp;
+                        Scroll to check out her past design work &ensp;
                         <Arrow>↓</Arrow>
                     </div>
                     <hr/>

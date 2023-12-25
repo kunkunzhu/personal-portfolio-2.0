@@ -1,5 +1,8 @@
-import React, {ReactNode} from "react";
+import React, {ReactNode, useState} from "react";
+// import Image from "next/image";
 import expData from "@/common/data/portfolio/experience.js"
+// import { generateRandomItem } from "@/common/utils/random";
+import IconFrame from "@/common/components/elements/portfolio/IconFrame";
 import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
 import { 
     AllExpWrapper,
@@ -8,6 +11,8 @@ import {
     ExpTitle,
     ExpYearWrapper,
     Header, 
+    Arrow,
+    // ClubImageWrapper,
 } from "./PortfolioStyles";
 
 
@@ -17,6 +22,7 @@ interface ExperienceInterface {
     org: string,
     tagline: string,
     link: string | null,
+    // images: string[],
     internship: boolean,
 }
 
@@ -29,26 +35,37 @@ interface YearExperiencesDataInterface {
     [key: string]: YearExperiencesInterface;
 }
 
-const ExpPill = ({ exp } : { exp: any }) => {
+const ExpPill = ({ exp } : { exp: ExperienceInterface }) => {
     return (
         <ExpPilLWrapper>
-            <ExpTitle>
-                <div className="role">{exp.role}</div>
-                •
-                <div className="org">{exp.org}</div>
-            </ExpTitle>
-            <ExpDescription>
-                <div className="tagline">{exp.tagline}.</div>
-            </ExpDescription>
+            <div className="text">
+                <ExpTitle>
+                    <div className="role">{exp.role}</div>
+                    •
+                    {exp.link ? 
+                    <a className="org" href={exp.link} target="_blank">{exp.org}</a>
+                    :
+                    <div className="org">{exp.org}</div>
+                    }
+                </ExpTitle>
+                <ExpDescription>
+                    <div className="tagline">{exp.tagline}.</div>
+                </ExpDescription>
+            </div>
+            {/* <div className="images">
+                {renderExpImages(exp.images)}
+            </div> */}
         </ExpPilLWrapper>
     )
 }
 
 export default function MiscPortfolio() {
 
+    const [isGif, setIsGif] = useState(false)
+
     const renderExperiences = (yearData : ExperienceInterface[]) => {
         let expsArray : Array<ReactNode> = []
-        yearData.map((exp: any) => (
+        yearData.map((exp: ExperienceInterface) => (
             expsArray.push(
                 <ExpPill exp={exp} key={exp.key}/>
             )
@@ -60,28 +77,35 @@ export default function MiscPortfolio() {
         const expYears = Object.values(expData)
         let expYearsArray : Array<ReactNode> = []
         
-        expYears.map((expYear) => (
+        expYears.map((expYear) => {
             expYearsArray.push(
                 <ExpYearWrapper>
                     <div className="year">
                         {expYear.year}
                     </div>
-                    {renderExperiences(expYear.exps)}
+                    <div className="exp">
+                        {renderExperiences(expYear.exps)}
+                    </div>
                 </ExpYearWrapper>
             )
-        ))
+            })
         return expYearsArray
     }
 
     return (
         <div>
-            <PortfolioBox>
+            <PortfolioBox gifBackground={isGif}>
                 <Header>
-                    <div className="header">
-                        {/* Click around to discover what I’ve been up to in and out of work — 
-                        the spaces I’ve been exploring & the communities I’ve been a part of. 
-                        Alternatively, grab a copy of my resume here •ᴗ• */}
+                    <div className="title">
+                        Kun <span className="flora">{IconFrame()}</span> thrives in environments of
+                        <div className="circle" onMouseEnter={() => setIsGif(true)} onMouseLeave={() => setIsGif(false)}>interdisciplinary</div> collaboration <span className="flora">✦.˖✶</span>
                     </div>
+                    <div className="prompt">
+                        For work-related experiences, grab a copy of her resume <a href="/resume.pdf" target="_blank">here</a>. <br/>
+                        Alternatively, check out the spaces she’s been exploring & the communities she’s been a part of &ensp;
+                        <Arrow>↓</Arrow>
+                    </div>
+                    <hr/>
                 </Header>
                 <AllExpWrapper>
                     {renderYears(expData)}
