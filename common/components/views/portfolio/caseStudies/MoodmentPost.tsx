@@ -37,14 +37,14 @@ function MoodmentPostContent() {
                 </Title>
             </Summary>
             <Section>
-                <Heading>motivation.</Heading>
+                <Heading>motivation:</Heading>
                 <Paragraph>
                     <div className="paragraph">
-                        Our emotions have a profound effect throughout aspect of our lives. But often, 
-                        we lack the vocabulary to accurately describe what we are feeling. <i>Sad. Mad. 
-                        Glad </i> — Variations of these primary emotions are the common adjectives we 
-                        use to describe how we are feeling, but they fail to encompass the complex terrain 
-                        of human emotions. When an emotion is not properly noticed and acknowledged, 
+                        Our emotions have a profound effect throughout every aspect of our lives. But often, 
+                        we lack the vocabulary to accurately capture what we are feeling. <i>Sad, Mad, 
+                        Glad </i> — Variations of these primary emotions are what we default to using
+                        when describing how we are feeling, but they fail to encompass the complex terrain 
+                        of human emotions. But when an emotion is not properly noticed and acknowledged, 
                         they may manifest in unhealthy ways, such as maladaptive coping mechanisms and 
                         emotional outbursts. 
                     </div>
@@ -82,17 +82,36 @@ function MoodmentPostContent() {
             </Section>
             <SectionDivider/>
             <Section>
-                <Heading>App ideation.</Heading>
+                <Heading>App ideation:</Heading>
                 <Paragraph>
                     <div className="paragraph">
                         Inspired by the emotional wheel as a tool to deepen emotional awareness and enhance mental well-being, 
                         &thinsp;<b>Moodment</b> is a lightweight app that invites one to pause and reflect upon their emotions under 
                         the guidance of an emotional wheel. 
-                    </div>
-                    <div className="paragraph">
                         The tagline of the app — <i> take time to feel </i>— is a reminder to stay present with the emotion arises at each moment.
                     </div>
+                    <div className="paragraph">
+                        
+                    </div>
                 </Paragraph>
+                <Paragraph>
+                    <h5 className="subheading">1. lo-fi </h5>
+                    <div className="paragraph">
+                        To create a blueprint for the app, I mapped out a simple user flow and constructed the information 
+                        architecture in order to brainstorm the structure and navigation within the app. From there, 
+                        I created the lofi-wireframe to capture the general layout of the app.
+                    </div>
+                </Paragraph>
+                <Paragraph>
+                    <h5 className="subheading">2. visual design</h5>
+                </Paragraph>
+                <Paragraph>
+                    <h5 className="subheading">3. hi-fi</h5>
+                </Paragraph>
+            </Section>
+            <SectionDivider/>
+            <Section>
+                <Heading>Reflection:</Heading>
             </Section>
         </Wrapper>
     )
@@ -100,7 +119,7 @@ function MoodmentPostContent() {
 
 export default function MoodmentPost() {
     return (
-        <PortfolioBox>
+        <PortfolioBox gifBackground={false}>
             <MoodmentPostContent/>
         </PortfolioBox>
     )

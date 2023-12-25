@@ -250,7 +250,7 @@ function VoicenotedPostContent() {
 
 export default function VoicenotedPost() {
     return (
-        <PortfolioBox>
+        <PortfolioBox gifBackground={false}>
             <VoicenotedPostContent/>
         </PortfolioBox>
     )

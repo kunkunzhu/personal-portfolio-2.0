@@ -204,7 +204,7 @@ function Technova21PostContent() {
 
 export default function Technova21Post() {
     return (
-        <PortfolioBox>
+        <PortfolioBox gifBackground={false}>
             <Technova21PostContent/>
         </PortfolioBox>
     )
