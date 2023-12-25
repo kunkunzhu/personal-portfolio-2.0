@@ -1,4 +1,36 @@
 const expData = {
+    y24: {
+        year: "2024",
+        exps: [
+            {
+                key: "canblab",
+                role: "Undergraduate Research Assistant",
+                org: "Cognition and Natural Behaviour Lab",
+                tagline: "",
+                // images: [],
+                link: "https://uwaterloo.ca/cognition-and-natural-behaviour-laboratory/",
+                internship: false
+            },
+            {
+                key: "muomentorship",
+                role: "Mentor",
+                org: "Math Peer Pair program",
+                tagline: "guiding first year student in navigating their undergrad experience",
+                link: null,
+                // images: [],
+                internship: false
+            },
+            {
+                key: "wimdrp2",
+                role: "Mentee",
+                org: "Women in Mathematics Directed Learning Program",
+                tagline: "experimenting with the story generation potentials of LLM",
+                link: null,
+                // images: [],
+                internship: false
+            },
+        ]
+    },
     y23: {
         year: "2023",
         exps: [
@@ -16,6 +48,7 @@ const expData = {
                 org: "Women in Mathematics Directed Learning Program",
                 tagline: "exploring transfer learning from a statistical perspective",
                 link: null,
+                // images: [],
                 internship: false
             },
             {
@@ -23,7 +56,8 @@ const expData = {
                 role: "VP of Design",
                 org: "UW Data Science Club",
                 tagline: "driving the visual branding for the largest academic club on campus",
-                link: null,
+                link: "https://www.uwdatascience.ca/",
+                // images: [],
                 internship: false
             },
             {
@@ -32,6 +66,7 @@ const expData = {
                 org: "TechNova",
                 tagline: "crafting resources for beginners to learn about ux design",
                 link: null,
+                // images: ['technova1.jpg', 'technova2.jpg', 'technova3.png'],
                 internship: false
             },
             // {
@@ -47,7 +82,8 @@ const expData = {
                 role: "Fellow",
                 org: "Reboot Student Fellowship",
                 tagline: "discoursing on the intersection between education and technology",
-                link: null,
+                link: "https://joinreboot.org/p/announcing-the-2023-reboot-student",
+                // images: [],
                 internship: false
             },
         ]
@@ -60,7 +96,8 @@ const expData = {
                 role: "DEI Lead",
                 org: "UW UX",
                 tagline: "initiating conversations about accessible and socially responsible design",
-                link: null,
+                link: "https://www.instagram.com/uw_ux/",
+                // images: [],
                 internship: false
             },
             // {
@@ -76,7 +113,8 @@ const expData = {
                 role: "Logistics Lead",
                 org: "Tech+",
                 tagline: "fostering a more inclusive community for underrepresented students in tech",
-                link: null,
+                link: "https://www.techplusuw.com/",
+                // images: [],
                 internship: false
             },
             {
@@ -84,7 +122,8 @@ const expData = {
                 role: "Design Lead",
                 org: "TechNova",
                 tagline: "spearheading creative projects for a global gender empowerment hackathon",
-                link: null,
+                link: "https://2022.itstechnova.org/",
+                // images: [],
                 internship: false
             },
         ]
