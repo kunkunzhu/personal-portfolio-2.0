@@ -1,7 +1,9 @@
 import React from "react";
+import Image from "next/image";
 import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
 import { 
-    Hero, 
+    HeroStyle, 
+    GeneralImageStyle,
     Summary, 
     Title,
     Heading,
@@ -24,7 +26,13 @@ function Technova21PostContent() {
                         Innovating the visual identity for UWaterloo's inaugural gender empowerment hackathon.
                     </div>
                 </Title>
-                <Hero src="https://i.ibb.co/1ddn0L6/Hero.png"/>
+                <Image 
+                    src="https://i.ibb.co/1ddn0L6/Hero.png"
+                    alt="Project Hero"
+                    style={HeroStyle}
+                    width={800}
+                    height={600}
+                /> 
             </Summary>
             <Section>
                 <Paragraph>
@@ -64,10 +72,13 @@ function Technova21PostContent() {
                         As an inaugural event, these initial branding decisions will critically impact how TechNova will be perceived as 
                         an organization. As a team, we spent days brainstorming and exchanging feedbacks on Figma:
                     </div>
-                    <img 
+                    <Image 
                     src="https://i.ibb.co/jVP2Drm/1-ideations.png" 
                     alt="Here are some snapshots of our collaborative workspaces on Figma!"
-                    className="imgDisplay"/>
+                    style={GeneralImageStyle}
+                    width={1800}
+                    height={600}
+                    />
                     <div className="paragraph">
                         The Triple Tile became our logo as it concisely communicates the pillars 
                         of our values, which are <b> career, community, and community</b>.
@@ -76,10 +87,13 @@ function Technova21PostContent() {
                         chosen for our wordmark. Quicksand and Poppins were selected 
                         for subtitles and text.
                     </div>
-                    <img 
+                    <Image
                     src="https://i.ibb.co/BsxvKwK/1-typography.png" 
                     alt="typography & logo marks"
-                    className="imgDisplay"/>
+                    style={GeneralImageStyle}
+                    width={2000}
+                    height={500}
+                    />
                     <div className="paragraph">
                         We wanted the feelings conveyed by our visual branding to be in congruence 
                         with the community-centered values held by the organization, so we chose 
@@ -87,10 +101,13 @@ function Technova21PostContent() {
                         <a href="https://color.adobe.com/create/color-accessibility" target="_blank">colour blind safe palette</a>
                         &thinsp;that portrayed a bright and friendly impression. 
                     </div>
-                    <img 
+                    <Image
                     src="https://i.ibb.co/dmy4J77/1-color.png" 
                     alt="color schemes"
-                    className="imgDisplay"/>
+                    style={GeneralImageStyle}
+                    width={2000}
+                    height={500}
+                    />
                     <h5 className="subheading">2. Website UX</h5> 
                     <div className="paragraph">
                         I supported the project manager the design lead in creating the website for the hackathon, 
@@ -103,16 +120,31 @@ function Technova21PostContent() {
                         can easily be directed the section of the website that is the most meaningful to them and 
                         perform their desired actions.
                     </div>
-                    <img 
+                    <Image
                     src="https://i.ibb.co/B4kwvp3/2-problem.png" 
-                    alt="define the problem" />
+                    alt="define the problem"
+                    style={GeneralImageStyle}
+                    width={1920}
+                    height={1080} />
                     <div className="paragraph">
                         However, we wanted to especially prioritize the experience 
                         of the hackers and ensure that they can find the information they need with ease. This is 
                         reflected in the top-to-bottom hierachy of the webpage.
                     </div>
-                    <img src="https://i.ibb.co/RjbNsWf/2-navbar.png" alt="nav bar" className="smallerDisplay"/>
-                    <img src="https://i.ibb.co/qmVDXXz/2-userjourney.png" alt="hacker user journey" className="smallerDisplay"/>
+                    <Image 
+                    src="https://i.ibb.co/RjbNsWf/2-navbar.png" 
+                    alt="nav bar" 
+                    style={GeneralImageStyle}
+                    width={1920}
+                    height={1080}
+                    />
+                    <Image 
+                    src="https://i.ibb.co/qmVDXXz/2-userjourney.png" 
+                    alt="hacker user journey" 
+                    style={GeneralImageStyle}
+                    width={1920}
+                    height={1080}
+                    />
                     <h6 className="subsubheading">Landing Page</h6>
                     <div className="paragraph">
                         As the first thing the user sees upon visiting the website, our landing page serves 
@@ -126,12 +158,24 @@ function Technova21PostContent() {
                         Through this process, I learned that <b> what is aesthetic may not always be the most accessible</b>, 
                         and it is always important to ensure that the design is in alignment with the brand.
                     </div>
-                    <img src="https://i.ibb.co/DMFF2Kq/2-landing2.png" alt="landing page initial design" className="smallerDisplay"/>
+                    <Image 
+                    src="https://i.ibb.co/DMFF2Kq/2-landing2.png" 
+                    alt="landing page initial design" 
+                    style={GeneralImageStyle}
+                    width={1920}
+                    height={1080}
+                    />
                     <div className="paragraph">
                         In order to create a more accesible viewing experience, we also included a toggle bar to 
                         allow the user to shift between light and dark mode!
                     </div>
-                    <img src="https://i.ibb.co/g7tfS7f/2-landing.png" alt="landing page final design" className="smallerDisplay"/>
+                    <Image 
+                    src="https://i.ibb.co/g7tfS7f/2-landing.png" 
+                    alt="landing page final design" 
+                    style={GeneralImageStyle}
+                    width={1920}
+                    height={1080}
+                    />
                     <h6 className="subsubheading">Our Story</h6>
                     <div className="paragraph">
                         As a first-time event, how could we convince a potential participant of the value within 
@@ -141,8 +185,20 @@ function Technova21PostContent() {
                         the UI, we decided on a concise layout and a progress bar that gamified the user experience 
                         in order to encourage the user to view through each different story.
                     </div>
-                    <img src="https://i.ibb.co/zQ0CR3f/2-ourstory.png" alt="testimonial section initial design" className="smallerDisplay"/>
-                    <img src="https://i.ibb.co/K9Sgf0D/2-ourstory1.png" alt="testimonial section final design" className="smallerDisplay"/>
+                    <Image 
+                    src="https://i.ibb.co/zQ0CR3f/2-ourstory.png" 
+                    alt="testimonial section initial design" 
+                    style={GeneralImageStyle}
+                    width={1920}
+                    height={1080}
+                    />
+                    <Image 
+                    src="https://i.ibb.co/K9Sgf0D/2-ourstory1.png" 
+                    alt="testimonial section final design" 
+                    style={GeneralImageStyle}
+                    width={1920}
+                    height={1080}
+                    />
                     <div className="paragraph">
                         After numerous iterations on Figma, we handed the hi-fidelity wireframes off to the dev team, 
                         who made the design come to life through code ✨👀
@@ -161,9 +217,13 @@ function Technova21PostContent() {
                     <div className="paragraph">
                         Below are some of the social media assets that I helped to create!
                     </div>
-                    <img
+                    <Image
                     src="https://i.ibb.co/DrmbMjr/3-socialposts.png"
-                    alt="sample social media posts"/>
+                    alt="sample social media posts"
+                    style={GeneralImageStyle}
+                    width={1920}
+                    height={1080}
+                    />
                 </Paragraph>
             </Section>
             <SectionDivider/>

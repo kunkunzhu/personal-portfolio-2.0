@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import Image from "next/image";
 import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
 import { 
-    Hero, 
+    HeroStyle, 
+    GeneralImageStyle,
     Summary, 
     Title,
     Heading,
@@ -50,7 +52,7 @@ const OptionButtons = styled.button`
     align-self: flex-start;
     border-radius: 20px;
     border: 2px solid var(--outline-color);
-    color: var(--body-color);
+    color: var(--outline-color);
     padding: 0.5rem 1rem 0.5rem 1rem;
     text-decoration: none;
     background: inherit;
@@ -89,8 +91,8 @@ const Technova22DesignProjects = () => {
                     <div className="paragraph">
                         Last year, we intentionally avoided adhering to a specific theme in order to 
                         shape a memorable visual identity of our inaugural event. With the brand now 
-                        clearly defined, we had more creative freedom in exploring specific themes for 
-                        the second iteration of the hackathon. Thus introducing: space theme  🚀🌌👩🏼‍🚀🪐 
+                        clearly defined, we now had more creative freedom. As such, we chose to have 
+                        a space theme for the second iteration of the hackathon 🚀🌌👩🏼‍🚀🪐 
                     </div>
                     <div className="paragraph">
                         In order to maintain brand consistency, we inherited the same style guide from 
@@ -100,10 +102,28 @@ const Technova22DesignProjects = () => {
                 </Paragraph>
                 <ImagesRow>
                     <ImagesCol>
-                        <img src="https://i.ibb.co/tmCg2dy/Typography-1.png"/>
-                        <img src="https://i.ibb.co/9Txv8Cx/Logo-1.png"/>
+                        <Image 
+                            src="https://i.ibb.co/tmCg2dy/Typography-1.png"
+                            alt="typography"
+                            style={GeneralImageStyle}
+                            width={450}
+                            height={500}
+                            />
+                        <Image 
+                            src="https://i.ibb.co/9Txv8Cx/Logo-1.png"
+                            alt="logo"
+                            style={GeneralImageStyle}
+                            width={500}
+                            height={450}
+                            />
                     </ImagesCol>
-                    <img src="https://i.ibb.co/YkBFJd1/Colours-1.png"/>
+                    <Image
+                        src="https://i.ibb.co/YkBFJd1/Colours-1.png"
+                        alt="colours"
+                        style={GeneralImageStyle}
+                        width={900}
+                        height={600}
+                        />
                 </ImagesRow>
             </Section>
             <SectionDivider/>
@@ -120,7 +140,13 @@ const Technova22DesignProjects = () => {
                             refinements and compile into the final version. Check out the <a href="https://2022.itstechnova.org/" target="_blank">
                             implemented website</a> and the <a href="https://bit.ly/3SV3XIx" target="_blank">Figma prototype</a> :)
                         </div>
-                        <img style={{marginLeft: "2.5rem"}} src="https://i.ibb.co/Wfs8wGD/ezgif-5-4f1190c7d5.gif"/>
+                        <Image 
+                            style={{marginLeft: "2.5rem"}} 
+                            src="https://i.ibb.co/Wfs8wGD/ezgif-5-4f1190c7d5.gif"
+                            alt="gif scroll of website"
+                            width={800}
+                            height={400}
+                            />
                     </ImagesRow>
                     <div className="paragraph">
                         Designing a website entirely in dark mode turned out to be both a fun and challenging 
@@ -137,7 +163,13 @@ const Technova22DesignProjects = () => {
                         We decided to showcase the information for each organization that generously sponsored or 
                         partnered with the hackathon in the format of space ticket, which was so fun to make.
                     </div>
-                    <img src="https://i.ibb.co/80wF2Rg/Frame-772-1.png"/>
+                    <Image 
+                        src="https://i.ibb.co/80wF2Rg/Frame-772-1.png"
+                        alt="space ticket"
+                        style={GeneralImageStyle}
+                        width={1920}
+                        height={1080}
+                        />
                     <div className="paragraph">
                         Recognizing that many of hackers access the website from their mobile devices, we also sought 
                         to prioritize <a href="https://bit.ly/3SWx1iI" target="_blank">mobile UX design</a> for this term. 
@@ -163,9 +195,17 @@ const Technova22DesignProjects = () => {
                         for the individual Instagram posts — with the background fading from a darker to a lighter tone. 
                     </div>
                     <div className="paragraph">
-                        Some of  . We were lucky to have , whose generousity enabled the success of the event. It was a fun 
+                        Some of my favourite designs that I had worked on were graphics showcasing the logos of our sponsors, 
+                        whose generousity enabled the success of the event. It was a fun experience coming up with ways to seamlessly incorporate the
+                        unique logo of each company into the 🚀space🪐 theme of the event.
                     </div>
-                    <img src="https://i.ibb.co/D84dssc/Untitled-18.png"/>
+                    <Image 
+                        src="https://i.ibb.co/D84dssc/Untitled-18.png"
+                        alt="sponsors"
+                        style={GeneralImageStyle}
+                        width={2000}
+                        height={500}
+                        />
                 </Paragraph>
             </Section>
             <Section>
@@ -176,16 +216,17 @@ const Technova22DesignProjects = () => {
                         favourite project that I worked on for the hackathon! Each hacker at TechNova received a wide range of swag items: 
                         from T-shirt, waterbottle, to stickers. In particular, I created the design for the tote bag. 
                     </div>
-                </Paragraph>
-                    <ImagesRow>
-                        <img src="https://i.ibb.co/b2tGrYv/Goovy-1.png"/>
-                        <img src="https://i.ibb.co/wSr46nL/IMG-4841.jpg"/>
-                    </ImagesRow>
-                <Paragraph>
                     <div className="paragraph">
                         It was my first time designing a swag item, and I absolutely loved the whole experience. I would occasionally see someone
                         carrying a tote bag that I designed walking through campus, and it always makes me feel so happy whenever that happens :)
                     </div>
+                    <Image 
+                        src="https://i.ibb.co/Wvk3BCL/TOTES.png"
+                        alt="sponsors"
+                        style={GeneralImageStyle}
+                        width={1920}
+                        height={1080}
+                        />
                 </Paragraph>
             </Section>
         </ Wrapper>
@@ -208,7 +249,13 @@ function Technova22PostContent() {
                             Evolving the visual experience of UWaterloo's gender empowerment hackathon.
                         </div>
                     </Title>
-                    <Hero src="https://i.ibb.co/dBhmQ7S/15-Macbook-Pro-Mockup-Left-View.png"/>
+                    <Image 
+                        src="https://i.ibb.co/dBhmQ7S/15-Macbook-Pro-Mockup-Left-View.png"
+                        alt="Project Hero"
+                        width={1200}
+                        height={800}
+                        style={HeroStyle}
+                        />
                 </Summary>
                 <Section>
                     <Paragraph>

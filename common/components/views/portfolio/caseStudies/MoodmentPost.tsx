@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Link from "next/link";
+import Image from "next/image";
 import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
 import { 
-    Hero, 
+    HeroStyle, 
     Summary, 
     Title,
     Heading,
@@ -48,35 +48,33 @@ function MoodmentPostContent() {
                         they may manifest in unhealthy ways, such as maladaptive coping mechanisms and 
                         emotional outbursts. 
                     </div>
-                    <ImagesRow>
-                        
-                    <div className="paragraph">
-                    <div 
-                    className="quote"
-                    style={{
-                        fontSize: "1.5rem", 
-                        padding: "0",
-                        paddingBottom: "2rem"
-                    }}>
-                        <b>Emotional literacy</b>: the ability to recognize, understand, and express one’s 
-                        emotions. 
-                    </div>
-                        A tool that assists with the acquisition of emotional literacy is the <b>emotional wheel</b>, a visual 
-                        framework initially introduced by the psychologist Robert Plutchik (see right for an example from <a href="https://feelingswheel.com/">https://feelingswheel.com/</a>).
-                         It maps emotions out 
-                        along primary emotions with similar emotions closer in proximity. To use the emotional wheel, 
-                        one begins by identifying their primary emotion, then navigate towards the specific term that 
-                        describes their state of emotional experience. The tool thus empowers the individual to more 
-                        precisely articulate their feelings as well as understand how different emotions 
-                        may be related to each other.
-                    </div>
-                    <img 
-                    src="https://feelingswheel.com/feelings-wheel.jpg" 
-                    alt="sample of emotional wheel"
-                    style={{
-                        width: "30%",
-                        height: "auto"
-                    }}/>
+                    <ImagesRow>    
+                        <div className="paragraph">
+                        <div 
+                        className="quote"
+                        style={{
+                            fontSize: "1.5rem", 
+                            padding: "0",
+                            paddingBottom: "2rem"
+                        }}>
+                            <b>Emotional literacy</b>: the ability to recognize, understand, and express one’s 
+                            emotions. 
+                        </div>
+                            A tool that assists with the acquisition of emotional literacy is the <b>emotional wheel</b>, a visual 
+                            framework initially introduced by the psychologist Robert Plutchik (see right for an example from <a href="https://feelingswheel.com/">https://feelingswheel.com/</a>).
+                            It maps emotions out 
+                            along primary emotions with similar emotions closer in proximity. To use the emotional wheel, 
+                            one begins by identifying their primary emotion, then navigate towards the specific term that 
+                            describes their state of emotional experience. The tool thus empowers the individual to more 
+                            precisely articulate their feelings as well as understand how different emotions 
+                            may be related to each other.
+                        </div>
+                        {/* <Image 
+                        src="https://feelingswheel.com/feelings-wheel.jpg" 
+                        alt="sample of emotional wheel"
+                        width={500}
+                        height={500}
+                        /> */}
                     </ImagesRow>
                 </Paragraph>
             </Section>

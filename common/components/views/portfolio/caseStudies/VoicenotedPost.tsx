@@ -1,7 +1,9 @@
 import React from "react";
+import Image from "next/image";
 import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
 import { 
-    TallHero, 
+    TallHeroStyle, 
+    GeneralImageStyle,
     Summary, 
     Title,
     Heading,
@@ -21,10 +23,16 @@ function VoicenotedPostContent() {
                             Voicenoted.
                         </div>
                         <div className="subtitle">
-                            Reimagining the podcast experience through notetaking functionality to optimize the learning experience.
+                            Reimagining the podcast experience through notetaking functionality.
                         </div>
                     </Title>
-                    <TallHero src="https://i.ibb.co/5xYM2z2/Hero.png"/> 
+                    <Image 
+                        src="https://i.ibb.co/5xYM2z2/Hero.png"
+                        alt="Project Hero"
+                        style={TallHeroStyle}
+                        width={400}
+                        height={500}
+                        /> 
                 </Summary>
                 <Section>
                     <Paragraph>
@@ -95,22 +103,38 @@ function VoicenotedPostContent() {
                             the user's personal library and available to be publically shared for 
                             others' discovery. 
                         </div>
-                        <img 
+                        <Image
                         src="https://i.ibb.co/6ykbdH5/userflow.png"
-                        alt="user journey map"/>
-                        <img
+                        alt="user journey map"
+                        style={GeneralImageStyle}
+                        width={1800}
+                        height={1200}
+                        />
+                        <Image
                         src="https://i.ibb.co/nMbMjGm/userflowsketch.png"
-                        alt="user flow sketch"/>
+                        alt="user flow sketch"
+                        style={GeneralImageStyle}
+                        width={1800}
+                        height={1200}
+                        />
                         <hr className="subdivider"/>
                     </Paragraph>
                     <Paragraph>
                         <h5 className="subheading">2. lofi wireframes</h5>
-                        <img
+                        <Image
                         src="https://i.ibb.co/vQ2HYjW/lofi1.png"
-                        alt="low fidelity wireframe for listen + note functions"/>
-                        <img
+                        alt="low fidelity wireframe for listen + note functions"
+                        style={GeneralImageStyle}
+                        width={2000}
+                        height={600}
+                        />
+                        <Image
                         src="https://i.ibb.co/YDJJk6z/lofi2.png"
-                        alt="low fidelity wireframe for organize + share functions"/>
+                        alt="low fidelity wireframe for organize + share functions"
+                        style={GeneralImageStyle}
+                        width={2000}
+                        height={600}
+                        />
                         <div className="paragraph">
                             Three tabs are created to capture these functionalities.
                             For each tab, a specific design question is asked:
@@ -189,12 +213,20 @@ function VoicenotedPostContent() {
                             Nunito is chosen as the Logomark font for its round terminals. From there, we also designed our app icon,
                             which mimicked the shape of audio waves.
                         </div>
-                        <img
+                        <Image
                         src="https://i.ibb.co/LphDrRw/stylebrainstorm.png"
-                        alt="style brainstorm"/>
-                        <img
+                        alt="style brainstorm"
+                        style={GeneralImageStyle}
+                        width={2000}
+                        height={600}
+                        />
+                        <Image
                         src="https://i.ibb.co/DD6xNmT/styleguide.png"
-                        alt="style guide"/>
+                        alt="style guide"
+                        style={GeneralImageStyle}
+                        width={2000}
+                        height={600}
+                        />
                         <hr className="subdivider"/>
                     </Paragraph>
                     <Paragraph>
@@ -202,15 +234,27 @@ function VoicenotedPostContent() {
                         <div className="paragraph"> 
                             From here, we are able to flesh out our high-fidelity wireframes.
                         </div>
-                        <img
+                        <Image
                         src="https://i.ibb.co/G2t5csw/listentab.png"
-                        alt="listen tab wireframe"/>
-                        <img
+                        alt="listen tab wireframe"
+                        style={GeneralImageStyle}
+                        width={1800}
+                        height={1200}
+                        />
+                        <Image
                         src="https://i.ibb.co/0QcxvT4/librarytab.png"
-                        alt="library tab wireframe"/>
-                        <img
+                        alt="library tab wireframe"
+                        style={GeneralImageStyle}
+                        width={2000}
+                        height={600}
+                        />
+                        <Image
                         src="https://i.ibb.co/5M1wtJX/exploretab.png"
-                        alt="explore tab wireframe"/>
+                        alt="explore tab wireframe"
+                        style={GeneralImageStyle}
+                        width={2000}
+                        height={600}
+                        />
                         <div className="paragraph">
                             After designing a thorough <a href="https://www.figma.com/proto/Vj2irgZW3INsWEC2f2kv2s/voicenoted?node-id=22%3A4859&scaling=contain&page-id=17%3A697&starting-point-node-id=22%3A4859&show-proto-sidebar=1">prototype
                             </a> of the app, we managed to complete all our core functionalities using 
