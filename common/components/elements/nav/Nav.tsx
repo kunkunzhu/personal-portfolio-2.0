@@ -45,7 +45,7 @@ const HamburgerMenu = styled.div`
 `
 
 const HamburgerWrapper = styled.div`
-    width: 150%;
+    width: 100vw;
     height: 16rem;
     position: absolute;
     top: 5rem;
