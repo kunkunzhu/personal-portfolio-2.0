@@ -8,20 +8,29 @@ export const Wrapper = styled.div`
     flex-direction: column;
 `
 
+/* NEXT JS IMAGE WRAPPERS */
+
+export const HeroStyle = {
+    width: "60%",
+    height: "auto",
+    maxheight: "35rem",
+    paddingTop: "1.5rem"
+}
+
+export const TallHeroStyle = {
+    height: "24rem",
+    width: "auto",
+    paddingTop: "1.5rem"
+}
+
+export const GeneralImageStyle = {
+    margin: "auto",
+    width: "100%",
+    padding: "1rem 0 1rem 0",
+    height: "auto"
+}
+
 /* HEADER STYLE */
-
-export const Hero = styled.img`
-    width: 60%;
-    height: auto;
-    maxheight: 35rem;
-    padding-top: 1.5rem;
-`
-
-export const TallHero = styled.img`
-    height: 25rem;
-    width: auto;
-    padding-top: 1.5rem;
-`
 
 export const Title = styled.div`
     max-width: 35vw;
@@ -179,22 +188,12 @@ export const Paragraph = styled.div`
             }
         }
     }
-    img {
-        margin: auto;
-        max-width: 100%;
-        padding: 1rem 0 1rem 0;
-        height: auto;
-    }
     .imgRow{
         display: flex;
         flex-direction: row; 
         flex-wrap: wrap;
         align-content: center; 
         justify-content: center;
-        .smallerDisplay {
-            padding: 1px;
-            width: 45%;
-        }
     }
 `
 

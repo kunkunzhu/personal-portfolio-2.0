@@ -125,14 +125,12 @@ export const ProjectInfo = styled.div`
     }
 `
 
-export const ProjectImage = styled.img`
-    width: 25rem;
-    height: 100%;
-    object-fit: contain;
-    border: 2px solid var(--outline-color);
-    border-radius: 15px;
-    padding: 0.5rem;
-`
+export const ProjectImageWrapper = {
+    maxWidth: "25rem",
+    border: "2px solid var(--outline-color)",
+    borderRadius: "15px",
+    padding: "0.5rem",
+} 
 
 export const ProjectWrapper = styled.div`
     display: flex;
