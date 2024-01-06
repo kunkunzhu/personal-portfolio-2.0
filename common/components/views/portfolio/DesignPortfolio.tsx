@@ -1,10 +1,11 @@
 import React, {ReactNode, useState} from "react";
+import Image from "next/image";
 import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
 import IconFrame from "@/common/components/elements/portfolio/IconFrame";
 import designData from "@/common/data/portfolio/design.js"
 import { 
     ProjectWrapper,
-    ProjectImage,
+    ProjectImageWrapper,
     ProjectInfo,
     ProjectLink,
     Header,
@@ -24,7 +25,16 @@ interface DesignProjects {
 const ProjectBox = ({ project }:{ project: DesignProjects }) => {
     return (
         <ProjectWrapper>
-            <ProjectImage src={project.image}/>
+            <Image
+                src={project.image}
+                alt="Project Thumbnail"
+                style={ProjectImageWrapper}
+                placeholder="blur"
+                blurDataURL={project.image}
+                layout="responsive"
+                width={1000}
+                height={500}
+                />
             <ProjectInfo>
                 <div className="subtitle">
                     {project.subtitle}
