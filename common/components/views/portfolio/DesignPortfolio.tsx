@@ -82,14 +82,14 @@ export default function DesignPortfolio() {
             <PortfolioBox gifBackground={isGif}>
                 <Header>
                     <div className="title">
-                        Kun <span className="flora">{IconFrame()}</span> is a curiosity-driven
+                        Kun <span className="icon">{IconFrame()}</span> is a curiosity-driven
                         <span className="circle" onMouseEnter={() => setIsGif(true)} onMouseLeave={() => setIsGif(false)}>designer</span> aspiring to craft 
                         digital experiences that evoke curiosity <span className="flora">✺</span> and delight <span className="flora">✹˖꙳</span>
-                    </div>
+                    </ div>
                     <div className="prompt">
                         Scroll to check out her past design work &ensp;
                         <Arrow className="flora">↓</Arrow>
-                    </div>
+                    </ div>
                     <hr/>
                 </Header>
                 {renderDesignProjects()}

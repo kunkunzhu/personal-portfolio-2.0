@@ -22,6 +22,10 @@ const BrowserIcons = styled.div`
     * {
         margin-left: 5px;
     }
+
+    @media (max-width: 480px) {
+        display: none;
+    }
 `
 
 const NavWrapper = styled.div`
@@ -30,6 +34,10 @@ const NavWrapper = styled.div`
         position: absolute;
         bottom: 0rem;
         left: -0.5rem;
+    }
+
+    @media (max-width: 480px) {
+        height: 2rem;
     }
 `
 
@@ -52,6 +60,10 @@ const NavItem = styled(Link)<NavItemProps>`
         background: var(--outline-color);
         color: var(--body-color);
         cursor: crosshair
+    }
+
+    @media (max-width: 480px) {
+        font-size: 0.8rem;
     }
 `
 

@@ -41,7 +41,7 @@ const ExpPill = ({ exp } : { exp: ExperienceInterface }) => {
             <div className="text">
                 <ExpTitle>
                     <div className="role">{exp.role}</div>
-                    •
+                    <span className="dot">•</span>
                     {exp.link ? 
                     <a className="org" href={exp.link} target="_blank">{exp.org}</a>
                     :
@@ -97,7 +97,7 @@ export default function MiscPortfolio() {
             <PortfolioBox gifBackground={isGif}>
                 <Header>
                     <div className="title">
-                        Kun <span className="flora">{IconFrame()}</span> thrives in environments of
+                        Kun <span className="icon">{IconFrame()}</span> thrives in environments of
                         <div className="circle" onMouseEnter={() => setIsGif(true)} onMouseLeave={() => setIsGif(false)}>interdisciplinary</div> collaboration <span className="flora">✦.˖✶</span>
                     </div>
                     <div className="prompt">

@@ -36,7 +36,6 @@ export const Header = styled.div`
 
     }
 
-
     .prompt {
         font-size: 1.2rem;
 
@@ -51,6 +50,19 @@ export const Header = styled.div`
         border: none;
         height: 2px;
         background-color: var(--highlight);
+    }
+
+    @media (max-width: 480px) {
+        height: 70vh;
+        margin-top: 4rem;
+
+        .title {
+            font-size: 1.5rem;
+        }
+
+        .icon {
+            display: none;
+        }
     }
 `
 
@@ -123,6 +135,21 @@ export const ProjectInfo = styled.div`
         }
         cursor: crosshair;
     }
+
+    @media (max-width: 480px) {
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+
+        .title {
+            font-size: 1.8rem;
+        }
+        .subtitle {
+            font-size: 0.8rem;
+        }
+        .description {
+            font-size: 1rem;
+        }
+    }
 `
 
 export const ProjectImageWrapper = {
@@ -139,6 +166,10 @@ export const ProjectWrapper = styled.div`
     margin: auto;
     padding-top: 4rem;
     padding-bottom: 2rem;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
 `
 
 export const ProjectLink = styled(Link)``
@@ -197,6 +228,12 @@ export const ExpPilLWrapper = styled.div`
         display: none;
     }
 
+    @media (max-width: 480px) {
+        .text {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 `
 export const ExpTitle = styled.div`
     display: flex;
@@ -215,10 +252,26 @@ export const ExpTitle = styled.div`
         cursor: crosshair;
         text-decoration: underline solid var(--highlight);
     }
+
+    @media (max-width: 480px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .dot {
+            display: none;
+        }
+    }
 `
 
 export const ExpDescription = styled.div`
-    opacity: 0.5
+    opacity: 0.5;
+
+    @media (max-width: 480px) {
+        .tagline {
+            margin-top: 1rem;
+        }
+    }
 `   
 
 export const ClubImageWrapper = {

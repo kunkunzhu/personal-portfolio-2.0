@@ -45,6 +45,19 @@ const SearchWrapper = styled.div`
             vertical-align: -50%;
         }
     }
+
+    @media (max-width: 480px) {
+        gap: 2rem;
+        grid-template-columns: 5rem auto;
+        padding: 0.5rem;
+
+        .navigation {
+            margin-left: 0.5rem;
+        }
+        .search {
+            margin-right: 0.5rem;
+        }
+    }
 `
 
 interface PortfolioContentStyleProps {
