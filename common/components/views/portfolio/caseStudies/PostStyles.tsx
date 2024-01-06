@@ -46,6 +46,14 @@ export const Title = styled.div`
         font-size: 1.2rem;
         font-family: var(--title-font);
     }
+
+    @media (max-width: 480px) {
+        max-width: 80vw;
+
+        .title {
+            font-size: 2rem;
+        }
+    }
 `
 
 export const Summary = styled.header`
@@ -54,6 +62,10 @@ export const Summary = styled.header`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
 `
 
 export const NutshellWrapper = styled.div`
@@ -61,6 +73,10 @@ export const NutshellWrapper = styled.div`
     justify-content: space-between; 
     padding-top: 2rem;
     gap: 2rem;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
 `
 
 export const NutshellCol = styled.div`
@@ -195,6 +211,13 @@ export const Paragraph = styled.div`
         align-content: center; 
         justify-content: center;
     }
+
+    @media (max-width: 480px) {
+        .quote {
+            font-size: 1rem;
+            line-height: 1.2rem;
+        }
+    }
 `
 
 export const Heading = styled.h3`
@@ -204,6 +227,10 @@ export const Heading = styled.h3`
     font-weight: bold;
     font-family: var(--title-font);
     text-transform: uppercase;
+
+    @media (max-width: 480px) {
+        font-size: 1.5rem;
+    }
 `
 
 export const SectionDivider = styled.hr`

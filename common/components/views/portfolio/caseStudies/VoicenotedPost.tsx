@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
 import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
 import { 
@@ -15,6 +15,19 @@ import {
  } from './PostStyles'
 
 function VoicenotedPostContent() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+          setIsMobile(window.innerWidth < 480);
+        };
+        handleResize(); 
+        window.addEventListener('resize', handleResize);
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
+
     return (
             <Wrapper>
                 <Summary>
@@ -146,8 +159,8 @@ function VoicenotedPostContent() {
                         className="paragraph"
                         style={{
                             fontSize: "0.9rem", 
-                            paddingLeft: "10rem",
-                            paddingTop: "0"
+                            paddingLeft: isMobile? "2rem" : "10rem",
+                            paddingTop: "0",
                         }}>
                             The <b>Listen Tab</b> allows the user to listen to podcast episodes and write voicenotes.
                             Since audio-based media is excellent for learning while multitasking, users will mostly likely 
@@ -167,7 +180,7 @@ function VoicenotedPostContent() {
                         className="paragraph"
                         style={{
                             fontSize: "0.9rem", 
-                            paddingLeft: "15rem",
+                            paddingLeft: isMobile? "3rem" : "15rem",
                             paddingTop: "0"
                         }}>
                             All voicenotes are organized in a <b>Library tab</b>. Initially created voicenotes are 
@@ -185,7 +198,7 @@ function VoicenotedPostContent() {
                         className="paragraph"
                         style={{
                             fontSize: "0.9rem", 
-                            paddingLeft: "25rem",
+                            paddingLeft: isMobile? "4rem" : "25rem",
                             paddingTop: "0"
                         }}>
                             We imagined that community-based learning can be facilitated if a user can make a voicenote 

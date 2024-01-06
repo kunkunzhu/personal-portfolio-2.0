@@ -23,9 +23,17 @@ const ImagesRow = styled.div`
     flex-direction: row;
     flex: 1;
     justify-content: space-between;
+    overflow: hidden;
     * {
         max-width: 50%;
         height: auto;
+    }
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        * {
+            max-width: 100%;
+        }
     }
 `
 
@@ -45,6 +53,10 @@ const ButtonRow = styled.div`
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
 `
 
 const OptionButtons = styled.button`
@@ -70,6 +82,11 @@ const OptionButtons = styled.button`
         background: var(--outline-color);
     }
     cursor: crosshair;
+
+    @media (max-width: 480px) {
+        font-size: 0.8rem;
+        width: 80%;
+    }
 `
 
 const Technova22Reflection = () => {
