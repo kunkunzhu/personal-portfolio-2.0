@@ -25,6 +25,10 @@ export const Wrapper = styled.div`
             cursor: crosshair;
         }
     }
+
+    @media (max-width: 480px) {
+        width: 100vw;
+    }
 `
 
 export const AboutWrapper = styled.div`
@@ -32,6 +36,12 @@ export const AboutWrapper = styled.div`
     flex-direction: row;
     margin: auto;
     width: 100%;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        margin: auto;
+        margin-left: 4rem;
+    }
 `
 
 export const Info = styled.div`
@@ -46,6 +56,17 @@ export const Info = styled.div`
     align-items: flex-start;
     margin-left: 4rem;
     margin-top: 1.5rem;
+
+    @media (max-width: 1000px) {
+        font-size: 1.2rem;
+        gap: 2rem;
+    }
+
+    @media (max-width: 480px) {
+        width: 75vw;
+        margin-left: 0;
+        margin-top: 2rem;
+    }
 `
 
 export const CollapsableText = styled.span<CollapsableProps>`
@@ -74,6 +95,10 @@ export const EmojiSticker = styled.div<EmojiStickerProps>`
 
     .emoji {
         font-size: 5rem;
+
+        @media (max-width: 480px) {
+            font-size: 3rem;
+        }
     }
     
     .tooltip {

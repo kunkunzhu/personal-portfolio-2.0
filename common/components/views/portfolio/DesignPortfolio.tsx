@@ -32,8 +32,8 @@ const ProjectBox = ({ project }:{ project: DesignProjects }) => {
                 placeholder="blur"
                 blurDataURL={project.image}
                 layout="responsive"
-                width={1000}
-                height={500}
+                width={800}
+                height={400}
                 />
             <ProjectInfo>
                 <div className="subtitle">
