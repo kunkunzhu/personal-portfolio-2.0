@@ -74,6 +74,11 @@ export const PortfolioContent = styled.div<PortfolioContentStyleProps>`
     background-repeat: no-repeat;
     background-size: 100%;
 
+    @media (max-width: 480px) {
+        background-position: center;
+        background-size: auto 100%;
+    }
+
     .flora {
         color: ${(props) => (props.$gifBackground ? "var(--body-color)" : 'var(--highlight)')};
     }

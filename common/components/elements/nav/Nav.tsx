@@ -48,11 +48,12 @@ const HamburgerWrapper = styled.div`
     width: 150%;
     height: 16rem;
     position: absolute;
-    top: 6rem;
+    top: 5rem;
     left: -1rem;
     padding: 2rem;
     padding-left: 4rem;
     display: flex;
+    z-index: 100;
     flex-direction: column;
 
     justify-content: space-around;
