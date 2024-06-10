@@ -1,124 +1,127 @@
 import React, { ReactNode, useState } from "react";
-import styled from "styled-components";
+import devData from "@/common/data/portfolio/dev";
+import Image from "next/image";
 import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
-import { AiOutlineLink } from "react-icons/ai";
-import devData from "@/common/data/portfolio/dev.js"
+import { AiOutlineLink, AiOutlineGithub } from "react-icons/ai";
+import {
+  Header,
+  Arrow,
+  DevProjTagWrapper,
+  DevProjWrapper,
+  DevProjInfo,
+  DevProjLinkWrapper,
+  DevProjHeader,
+  DevProjTag,
+  DevProjDescription,
+  DevProjectImageWrapper,
+  DevProjectsWrapper,
+} from "./PortfolioStyles";
+import IconFrame from "@/common/components/elements/portfolio/IconFrame";
 
-const Header = styled.div`
-    width: 70vw;
-    margin: auto;
-    margin-top: 5rem;
+interface DevProject {
+  key: string;
+  image: string;
+  title: string;
+  subtitle: string;
+  code?: string;
+  url?: string;
+  description?: string;
+  tech: string[];
+  tags: string[];
+}
 
-    .header {
-        font-size: 2.5rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-    }
-`
+const ProjectBox = ({ project }: { project: DevProject }) => {
+  const renderTags = () => {
+    let tagsArray: Array<ReactNode> = [];
+    const techTags = project.tech;
+    const miscTags = project.tags;
 
-const Projects = styled.ul`
-    margin: 5rem auto auto auto;
-    display: flex;
-    flex-direction: row;
-    width: 70vw;
-    .projects {
-        list-style: none;
-        display: table-cell;
-        width: 50%;
-        padding: 2.5rem 2rem 5rem 2rem;
-    }
-    .image {
-        display: table-cell;
-        margin-left: 5rem;
-        width: 50%;
-    }
-`
+    miscTags.map((tag) => {
+      tagsArray.push(<DevProjTag $misc={true}>{tag}</DevProjTag>);
+    });
+    techTags.map((tag) => {
+      tagsArray.push(<DevProjTag $misc={false}>{tag}</DevProjTag>);
+    });
 
-const ProjectWrapper = styled.li`
-    .title {
-        display: flex;
-        flex-direction: row;
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        font-weight: bold;
-        letter-spacing: 0.2rem;
-        .icon {
-            margin-left: 0.5rem;
-            cursor: crosshair;
-        }
-        :hover {
-            opacity: 0.8;
-        }
-    }
-    margin-bottom: 2rem;
-`
+    return tagsArray;
+  };
 
-const ProjectImage = styled.img`
-    width: 26rem;
-    height: 14.5rem;
-    object-fit: cover;
-    border: 2px solid;
-    border-radius: 15px;
-    padding: 0.2rem;
-`
+  return (
+    <DevProjWrapper>
+      <DevProjDescription>
+        <DevProjInfo>
+          <DevProjHeader>
+            <div className="title text">{project.title}</div>
+            <DevProjLinkWrapper>
+              {project.url && (
+                <a href={project.url} target="_blank">
+                  <AiOutlineLink size={30} color={"var(--outline-color)"} />
+                </a>
+              )}
+              {project.code && (
+                <a href={project.code} target="_blank">
+                  <AiOutlineGithub size={30} color={"var(--outline-color)"} />
+                </a>
+              )}
+            </DevProjLinkWrapper>
+          </DevProjHeader>
+          <div className="subtitle text">{project.subtitle}</div>
+        </DevProjInfo>
+        <DevProjTagWrapper> {renderTags()}</DevProjTagWrapper>
+      </DevProjDescription>
+      <Image
+        className="image"
+        src={project.image}
+        alt="Project Thumbnail"
+        style={DevProjectImageWrapper}
+        placeholder="blur"
+        blurDataURL={project.image}
+        layout="responsive"
+        width={300}
+        height={200}
+      />
+    </DevProjWrapper>
+  );
+};
 
 export default function DevPortfolio() {
+  const [isGif, setIsGif] = useState(false);
 
-    const defaultDisplay = "https://venturebeat.com/wp-content/uploads/2014/10/loading_desktop_by_brianmccumber-d41z4h6.gif?fit=400%2C225&strip=all"
+  const renderDevProjects = () => {
+    const projects = Object.values(devData);
+    let projectsArray: Array<ReactNode> = [];
+    projects.map((project) => {
+      projectsArray.push(<ProjectBox key={project.key} project={project} />);
+    });
+    return projectsArray;
+  };
 
-    const [display, setDisplay] = useState(defaultDisplay)
-
-    const Project = ({ project }: { project: any }) => {
-        return (
-            <ProjectWrapper 
-            onMouseOver={() => setDisplay(project.image)} 
-            onMouseLeave={() => setDisplay(defaultDisplay)}>
-                <div className="title">
-                    {project.title}
-                    <a href={project.site} target='_blank' rel='noreferrer'>
-                        <AiOutlineLink className="icon"/>
-                    </a>
-                </div>
-                <div className="description">
-                    {project.description}
-                </div>
-            </ProjectWrapper>
-        )
-    }
-
-    const renderDevProjects = () => {
-        const projects = Object.values(devData)
-        let projectsArray : Array<ReactNode> = []
-        projects.map((project) => {
-            projectsArray.push(
-                <Project project={project}/>
-            )
-        })
-        return projectsArray
-    }
-
-    return (
-        <div>
-            <PortfolioBox gifBackground={false}>
-                <Header>
-                    <div className="header">
-                        welcome! I'm kun •ᴗ•
-                    </div>
-                    <div className="about">
-                        an aspiring creative technologist
-                        eager to craft experiences that evoke 
-                        curiosity and delight.
-                    </div>
-                </Header>
-                <Projects>
-                    <ul className="projects">
-                        {renderDevProjects()}
-                    </ul>
-                    <div className="image">
-                        <ProjectImage src={display}/>
-                    </div>
-                </Projects>
-            </PortfolioBox>
-        </div>
-    )
+  return (
+    <div>
+      <PortfolioBox gifBackground={isGif}>
+        <Header>
+          <div className="title">
+            Kun <span className="icon">{IconFrame()}</span> is a
+            curiosity-driven
+            <span
+              className="circle"
+              onMouseEnter={() => setIsGif(true)}
+              onMouseLeave={() => setIsGif(false)}
+            >
+              developer
+            </span>{" "}
+            aspiring to craft digital experiences that evoke serendipity{" "}
+            <span className="flora">✺</span> and delight{" "}
+            <span className="flora">✹˖꙳</span>
+          </div>
+          <div className="prompt">
+            Scroll to check out the projects she's been building &ensp;
+            <Arrow className="flora">↓</Arrow>
+          </div>
+          <hr />
+        </Header>
+        <DevProjectsWrapper>{renderDevProjects()}</DevProjectsWrapper>
+      </PortfolioBox>
+    </div>
+  );
 }
