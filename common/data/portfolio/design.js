@@ -33,7 +33,7 @@ const designData = {
         subtitle: "Personal Project",
         description: "Cultivating emotional literacy through mindful awareness.",
         prompt: "work in progress",
-        link: "/portfolio/design/moodment"
+        link: ""
     },
     // frui: {
     //     key: "technova22",

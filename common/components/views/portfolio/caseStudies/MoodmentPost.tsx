@@ -11,6 +11,7 @@ import {
     Section,
     SectionDivider,
     Wrapper,
+    GeneralImageStyle
 } from './PostStyles'
 
 const ImagesRow = styled.div`
@@ -27,17 +28,23 @@ function MoodmentPostContent() {
     return (
         <Wrapper>
             <Summary>
-                <Title>
+                <Title style={{maxWidth: "70vw"}}>
                     <div className="title">
                         Moodment.
                     </div>
                     <div className="subtitle">
-
+                        Cultivating emotional literacy through mindful awareness.
                     </div>
                 </Title>
+                <Image 
+                    src="https://i.ibb.co/9rB17Nm/MOODMENT.png"
+                    alt="Project Hero"
+                    style={HeroStyle}
+                    width={1200}
+                    height={1000}
+                /> 
             </Summary>
             <Section>
-                <Heading>motivation:</Heading>
                 <Paragraph>
                     <div className="paragraph">
                         Our emotions have a profound effect throughout every aspect of our lives. But often, 
@@ -83,6 +90,14 @@ function MoodmentPostContent() {
                 <Heading>App ideation:</Heading>
                 <Paragraph>
                     <div className="paragraph">
+                        It all began with a question: 
+                    </div>
+                    <div className="quote">
+                        How can we take the time process our emotions more mindfully?
+                    </div>
+                </Paragraph>
+                <Paragraph>
+                    <div className="paragraph">
                         Inspired by the emotional wheel as a tool to deepen emotional awareness and enhance mental well-being, 
                         &thinsp;<b>Moodment</b> is a lightweight app that invites one to pause and reflect upon their emotions under 
                         the guidance of an emotional wheel. 
@@ -95,10 +110,33 @@ function MoodmentPostContent() {
                 <Paragraph>
                     <h5 className="subheading">1. lo-fi </h5>
                     <div className="paragraph">
-                        To create a blueprint for the app, I mapped out a simple user flow and constructed the information 
-                        architecture in order to brainstorm the structure and navigation within the app. From there, 
-                        I created the lofi-wireframe to capture the general layout of the app.
+                        To begin, I constructed the <b>information architecture</b> and mapped out a simple <b>user flow </b> 
+                        in order to create a blueprint for the overall structure and navigation within the app. 
                     </div>
+                    <Image 
+                    src="https://i.ibb.co/7246KrK/Info-Architecture.png" 
+                    alt="Information Architecture"
+                    style={GeneralImageStyle}
+                    width={1669}
+                    height={614}
+                    />
+                    <Image 
+                    src="https://i.ibb.co/NnhDg5X/User-Flow.png" 
+                    alt="User Flow"
+                    style={GeneralImageStyle}
+                    width={1929}
+                    height={833}
+                    />
+                    <div className="paragraph">
+                        From there, I created the <b>lofi-wireframe</b> in order to capture the general layout of the app.
+                    </div>
+                    <Image 
+                    src="https://i.ibb.co/yyDs3cD/Lofi-Wireframes.png" 
+                    alt="Lofi Wireframe"
+                    style={GeneralImageStyle}
+                    width={1300}
+                    height={600}
+                    />
                 </Paragraph>
                 <Paragraph>
                     <h5 className="subheading">2. visual design</h5>

@@ -24,10 +24,10 @@ export const TallHeroStyle = {
 }
 
 export const GeneralImageStyle = {
-    margin: "auto",
     width: "100%",
-    padding: "1rem 0 1rem 0",
-    height: "auto"
+    margin: "1rem 0 1rem 0",
+    height: "auto",
+    borderRadius: "1rem"
 }
 
 /* HEADER STYLE */
