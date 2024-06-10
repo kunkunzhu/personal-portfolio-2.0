@@ -1,6 +1,8 @@
+/** @format */
+
 import React from "react";
 import styled from "styled-components";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { NavItemProps } from "../nav/Nav";
 import Link from "next/link";
 import {
@@ -69,10 +71,10 @@ const NavItem = styled(Link)<NavItemProps>`
 `;
 
 export default function PortfolioNav() {
-  const router = useRouter();
-  const isDesign = router.pathname.includes("design");
-  const isMisc = router.pathname.includes("misc");
-  const isDev = !isDesign && !isMisc;
+  const path = usePathname();
+  const isDesign = path.includes("design");
+  const isMisc = path.includes("misc");
+  const isDev = path.includes("portfolio") && !isDesign && !isMisc;
 
   const renderBrowserBar = () => {
     return (

@@ -1,5 +1,7 @@
+/** @format */
+
 import React, { useState } from "react";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import styled from "styled-components";
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
@@ -77,8 +79,8 @@ export const Nav = (props: NavProps) => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
   const [hamburgerOpen, setHamburgerOpen] = useState<boolean>(false);
 
-  const router = useRouter();
-  const isPortfolio = router.pathname.includes("portfolio");
+  const path = usePathname();
+  const isPortfolio = path.includes("portfolio");
 
   const setDisplayMode = (isDark: boolean) => {
     setDarkMode(isDark);
