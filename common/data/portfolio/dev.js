@@ -1,3 +1,5 @@
+/** @format */
+
 const devData = {
   // template: {
   //     key: "",
@@ -12,8 +14,7 @@ const devData = {
   //     },
   converstation: {
     key: "convo",
-    image:
-      "https://ralfvanveen.com/wp-content/uploads/2021/06/Placeholder-_-Glossary.svg",
+    image: "/projectImages/converstation.png",
     title: "converstation",
     code: "https://github.com/vibbyg/converstation",
     subtitle:
