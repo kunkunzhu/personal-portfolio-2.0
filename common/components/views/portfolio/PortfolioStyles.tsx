@@ -5,7 +5,6 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import Link from "next/link";
 import { NavItemProps } from "../../elements/nav/Nav";
-import { cn } from "@/common/utils/random";
 
 type ComponentProps = {
   className?: string;
@@ -21,19 +20,6 @@ const wobble = keyframes`
     transform: translateY(-0.2rem); /* Adjust the distance to move up and down */
   }
 `;
-
-export const HeaderWrap = ({ children, className = "" }: ComponentProps) => {
-  return (
-    <div
-      className={cn(
-        "w-[70vw] h-[50vh] my-12 mx-auto flex flex-col justify-between",
-        className
-      )}
-    >
-      {children}
-    </div>
-  );
-};
 
 export const Header = styled.div`
   width: 70vw;
