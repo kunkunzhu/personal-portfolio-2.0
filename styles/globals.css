@@ -1,10 +1,12 @@
-:root {
-  --dark: #0B0C23;
-  --light: #FEFEFA;
-  --highlight: #FFB4A3;
+/** @format */
 
-  --text-font: 'Rubik', sans-serif;
-  --title-font: 'Domine', serif;
+:root {
+  --dark: #0b0c23;
+  --light: #fefefa;
+  --highlight: #ffb4a3;
+
+  --text-font: "Rubik", sans-serif;
+  --title-font: "Domine", serif;
 }
 
 * {
@@ -26,4 +28,22 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+@media (min-width: 780px) {
+  #sm-only {
+    display: none;
+  }
+  #no-sm {
+    display: inline;
+  }
+}
+
+@media (max-width: 780px) {
+  #no-sm {
+    display: none;
+  }
+  #sm-only {
+    display: inline-block;
+  }
 }

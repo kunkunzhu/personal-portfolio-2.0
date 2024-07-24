@@ -32,14 +32,18 @@ const BrowserIcons = styled.div`
 
 const NavWrapper = styled.div`
   position: relative;
-  .divItems {
-    position: absolute;
-    bottom: 0rem;
-    left: -0.5rem;
+
+  @media (min-width: 780px) {
+    .divItems {
+      position: absolute;
+      bottom: 0rem;
+      left: -0.5rem;
+    }
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 780px) {
     height: 2rem;
+    margin-top: 0.2rem;
   }
 `;
 
@@ -65,7 +69,7 @@ const NavItem = styled(Link)<NavItemProps>`
     cursor: crosshair;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 640px) {
     font-size: 0.8rem;
   }
 `;
@@ -90,14 +94,23 @@ export default function PortfolioNav() {
     <BrowserBar>
       <NavWrapper>
         <div className="divItems">
-          <NavItem $current={isDev} href="/portfolio">
+          <NavItem $current={isDev} href="/portfolio" id="no-sm">
             dev
           </NavItem>
-          <NavItem $current={isDesign} href="/portfolio/design">
+          <NavItem $current={isDev} href="/portfolio" id="sm-only">
+            💻
+          </NavItem>
+          <NavItem $current={isDesign} href="/portfolio/design" id="no-sm">
             designs
           </NavItem>
-          <NavItem $current={isMisc} href="/portfolio/misc">
+          <NavItem $current={isDesign} href="/portfolio/design" id="sm-only">
+            🎨
+          </NavItem>
+          <NavItem $current={isMisc} href="/portfolio/misc" id="no-sm">
             Experiences
+          </NavItem>
+          <NavItem $current={isMisc} href="/portfolio/misc" id="sm-only">
+            ✨
           </NavItem>
         </div>
       </NavWrapper>

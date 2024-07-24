@@ -23,7 +23,7 @@ const NavWrapper = styled.div`
   width: 85vw;
   margin: auto;
 
-  @media (max-width: 480px) {
+  @media (max-width: 780px) {
     width: 100vw;
   }
 `;
@@ -33,7 +33,7 @@ const TabsWrapper = styled.div`
   flex-direction: row;
   gap: 5rem;
 
-  @media (max-width: 480px) {
+  @media (max-width: 780px) {
     display: none;
   }
 `;
@@ -41,7 +41,7 @@ const TabsWrapper = styled.div`
 const HamburgerMenu = styled.div`
   margin-top: -0.5rem;
 
-  @media (min-width: 480px) {
+  @media (min-width: 780px) {
     display: none;
   }
 `;
