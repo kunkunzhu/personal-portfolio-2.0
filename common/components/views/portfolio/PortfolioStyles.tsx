@@ -1,6 +1,16 @@
+/** @format */
+
+import React from "react";
+
 import styled, { keyframes } from "styled-components";
 import Link from "next/link";
 import { NavItemProps } from "../../elements/nav/Nav";
+import { cn } from "@/common/utils/random";
+
+type ComponentProps = {
+  className?: string;
+  children?: React.ReactNode;
+};
 
 // general styles
 const wobble = keyframes`
@@ -11,6 +21,19 @@ const wobble = keyframes`
     transform: translateY(-0.2rem); /* Adjust the distance to move up and down */
   }
 `;
+
+export const HeaderWrap = ({ children, className = "" }: ComponentProps) => {
+  return (
+    <div
+      className={cn(
+        "w-[70vw] h-[50vh] my-12 mx-auto flex flex-col justify-between",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+};
 
 export const Header = styled.div`
   width: 70vw;
@@ -52,12 +75,12 @@ export const Header = styled.div`
     background-color: var(--highlight);
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 640px) {
     height: 70vh;
     margin-top: 4rem;
 
     .title {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
     }
 
     .icon {
@@ -87,6 +110,11 @@ export const DevProjectsWrapper = styled.div`
   flex-direction: column;
   gap: 2rem;
   margin: 0 0 4rem 8rem;
+
+  @media (max-width: 640px) {
+    margin: 0;
+    margin-left: 2rem;
+  }
 `;
 
 export const DevProjWrapper = styled.div`
@@ -110,6 +138,9 @@ export const DevProjWrapper = styled.div`
       transition: 0.2s ease-in-out;
     }
   }
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
 `;
 
 export const DevProjDescription = styled.div`
@@ -128,6 +159,12 @@ export const DevProjHeader = styled.div`
     text-transform: uppercase;
     font-size: 1.8rem;
     font-family: var(--title-font);
+  }
+
+  @media (max-width: 640px) {
+    .title {
+      font-size: 1.5rem;
+    }
   }
 `;
 
@@ -164,6 +201,7 @@ export const DevProjTag = styled.div<DevProjProps>`
   opacity: ${(props) => (props.$misc ? 1 : 0.5)};
   border-radius: 25px;
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  word-break: break-all;
   color: ${(props) =>
     props.$misc ? "var(--highlight)" : "var(--outline-color)"};
 `;
@@ -175,8 +213,7 @@ export const DevProjTagWrapper = styled.div`
 `;
 
 export const DevProjectImageWrapper = {
-  maxWidth: "20rem",
-  border: "2px solid var(--outline-color)",
+  maxWidth: "22rem",
   borderRadius: "15px",
 };
 
@@ -236,7 +273,7 @@ export const ProjectInfo = styled.div`
     cursor: crosshair;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 640px) {
     margin-top: 1rem;
     margin-left: 0.5rem;
 
@@ -266,7 +303,7 @@ export const ProjectWrapper = styled.div`
   width: 70vw;
   margin: auto;
 
-  @media (max-width: 480px) {
+  @media (max-width: 640px) {
     flex-direction: column;
   }
 `;
@@ -327,7 +364,7 @@ export const ExpPilLWrapper = styled.div`
     display: none;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 640px) {
     .text {
       display: flex;
       flex-direction: column;
@@ -352,7 +389,7 @@ export const ExpTitle = styled.div`
     text-decoration: underline solid var(--highlight);
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 640px) {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -366,7 +403,7 @@ export const ExpTitle = styled.div`
 export const ExpDescription = styled.div`
   color: var(--body-color);
 
-  @media (max-width: 480px) {
+  @media (max-width: 640px) {
     .tagline {
       margin-top: 1rem;
     }
