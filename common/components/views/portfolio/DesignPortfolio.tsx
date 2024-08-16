@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { ReactNode, useState } from "react";
 import Image from "next/image";
 import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
@@ -31,7 +33,6 @@ const ProjectBox = ({ project }: { project: DesignProjects }) => {
         style={ProjectImageWrapper}
         placeholder="blur"
         blurDataURL={project.image}
-        layout="responsive"
         width={800}
         height={400}
       />

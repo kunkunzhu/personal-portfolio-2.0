@@ -1,3 +1,5 @@
+/** @format */
+
 export const workExpData = {
   y24: {
     year: "2024",
@@ -60,6 +62,16 @@ export const extraExpData = {
   y24: {
     year: "2024",
     exps: [
+      {
+        key: "douzeadeux",
+        role: "Cohost",
+        org: "Douze a Deux",
+        tagline: [
+          "nurturing a Montreal-based coworking community for passion projects",
+        ],
+        link: "https://douzeadeux.vercel.app/",
+        internship: false,
+      },
       {
         key: "canblab",
         role: "Research Assistant",

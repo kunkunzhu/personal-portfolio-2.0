@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { ReactNode, useState } from "react";
 import devData from "@/common/data/portfolio/dev";
 import Image from "next/image";
@@ -20,7 +22,7 @@ import IconFrame from "@/common/components/elements/portfolio/IconFrame";
 
 interface DevProject {
   key: string;
-  image: string;
+  image?: string;
   title: string;
   subtitle: string;
   code?: string;
@@ -69,17 +71,20 @@ const ProjectBox = ({ project }: { project: DevProject }) => {
         </DevProjInfo>
         <DevProjTagWrapper> {renderTags()}</DevProjTagWrapper>
       </DevProjDescription>
-      <Image
-        className="image"
-        src={project.image}
-        alt="Project Thumbnail"
-        style={DevProjectImageWrapper}
-        placeholder="blur"
-        blurDataURL={project.image}
-        layout="responsive"
-        width={300}
-        height={200}
-      />
+      <div style={{ height: "200px" }}>
+        {project.image && (
+          <Image
+            className="image"
+            src={project.image}
+            alt="Project Thumbnail"
+            style={DevProjectImageWrapper}
+            placeholder="blur"
+            blurDataURL={project.image}
+            width={300}
+            height={200}
+          />
+        )}
+      </div>
     </DevProjWrapper>
   );
 };

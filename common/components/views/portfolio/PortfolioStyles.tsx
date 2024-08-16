@@ -163,6 +163,8 @@ export const DevProjInfo = styled.div`
   .subtitle {
     font-size: 1.2rem;
     margin-right: 2rem;
+    opacity: 0.75;
+    text-transform: lowercase;
   }
 `;
 
@@ -182,7 +184,6 @@ interface DevProjProps {
 
 export const DevProjTag = styled.div<DevProjProps>`
   font-family: var(--text-font);
-  text-transform: lowercase;
   border: 2px solid;
   opacity: ${(props) => (props.$misc ? 1 : 0.5)};
   border-radius: 25px;
