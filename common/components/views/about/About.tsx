@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { ReactNode, useState, useEffect } from "react";
 import {
   EmojiSticker,
@@ -140,10 +142,6 @@ function Workspace() {
   const [displayMajor, setDisplayMajor] = useState<boolean>(false);
   const [displayInspo, setDisplayInspo] = useState<boolean>(false);
   const [displayLinks, setDisplayLinks] = useState<boolean>(false);
-  const [specificInspo, setSpecificInspo] = useState<string>("");
-
-  // TODO: animiation for the word definitions
-  console.log(specificInspo);
 
   const [hobbies, setHobbies] = useState<string[]>([]);
 
@@ -202,20 +200,10 @@ function Workspace() {
             things inspire her
             {displayInspo && (
               <CollapsedText>
-                , such as{" "}
-                <InspoText onHover={() => setSpecificInspo("empathy")}>
-                  empathy
-                </InspoText>
+                , such as <InspoText>empathy</InspoText>
                 ,&thinsp;
-                <InspoText onHover={() => setSpecificInspo("creativity")}>
-                  creativity
-                </InspoText>
-                , and&thinsp;
-                <InspoText
-                  onHover={() => setSpecificInspo("interdisciplinarity")}
-                >
-                  interdisciplinarity
-                </InspoText>
+                <InspoText>creativity</InspoText>, and&thinsp;
+                <InspoText>interdisciplinarity</InspoText>
               </CollapsedText>
             )}
             . She can also be found{" "}

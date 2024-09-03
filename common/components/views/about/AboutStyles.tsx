@@ -76,7 +76,7 @@ export const CollapsableText = styled.span<CollapsableProps>`
     props.collapse ? "none" : "underline solid var(--highlight)"};
 `;
 
-export const InspoText = styled.span<InspoProps>`
+export const InspoText = styled.span`
   opacity: 0.6;
   &:hover {
     opacity: 1;
