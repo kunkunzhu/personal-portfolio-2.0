@@ -1,5 +1,7 @@
-import Head from 'next/head'
-import About from '@/common/components/views/about/About'
+/** @format */
+
+import Head from "next/head";
+import About from "@/common/components/views/about/About";
 
 export default function Home() {
   return (
@@ -11,10 +13,10 @@ export default function Home() {
         <link rel="icon" href="/kun.png" type="image/png" />
       </Head>
       <main>
-        <div>
+        <body>
           <About />
-        </div>
+        </body>
       </main>
     </>
-  )
+  );
 }
