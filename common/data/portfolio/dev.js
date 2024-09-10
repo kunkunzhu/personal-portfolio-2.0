@@ -12,15 +12,25 @@ const devData = {
   //     tech: [],
   //     tags: [],
   //     },
+  obbie: {
+    key: "obbie",
+    image: "/projectImages/obbie.png",
+    title: "Obbie",
+    code: "https://github.com/kunkunzhu/obbie",
+    subtitle:
+      "Hobby tracker to help you show up consistently to your side quests",
+    tech: ["Remix.js", "Tailwind CSS", "Prisma", "MongoDB"],
+    tags: ["webapp"],
+  },
   converstation: {
     key: "convo",
     image: "/projectImages/converstation.png",
     title: "converstation",
     code: "https://github.com/vibbyg/converstation",
-    url: "https://converstation.onrender.com/",
+    url: "https://converstation.vercel.app/",
     subtitle:
       "Gamify the generation of conversation prompts to inspire deeper connection.",
-    tech: ["React.js", "Next.js", "Tailwind CSS", "Supabase"],
+    tech: ["Next.js", "Tailwind CSS", "Supabase"],
     tags: ["webapp"],
   },
   // twentytwenty: {
