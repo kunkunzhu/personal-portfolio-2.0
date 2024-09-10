@@ -197,6 +197,13 @@ export const DevProjTagWrapper = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0.4rem;
+
+  @media (max-width: 780px) {
+    flex-direction: column;
+    * {
+      max-width: fit-content;
+    }
+  }
 `;
 
 export const DevProjectImageWrapper = {

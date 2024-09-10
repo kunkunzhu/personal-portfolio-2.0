@@ -36,11 +36,11 @@ const ProjectBox = ({ project }: { project: DevProject }) => {
   const renderTags = () => {
     let tagsArray: Array<ReactNode> = [];
     const techTags = project.tech;
-    const miscTags = project.tags;
+    // const miscTags = project.tags;
 
-    miscTags.map((tag) => {
-      tagsArray.push(<DevProjTag $misc={true}>{tag}</DevProjTag>);
-    });
+    // miscTags.map((tag) => {
+    //   tagsArray.push(<DevProjTag $misc={true}>{tag}</DevProjTag>);
+    // });
     techTags.map((tag) => {
       tagsArray.push(<DevProjTag $misc={false}>{tag}</DevProjTag>);
     });
