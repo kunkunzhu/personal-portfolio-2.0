@@ -69,12 +69,15 @@ const ProjectBox = ({ project }: { project: DevProject }) => {
           </DevProjHeader>
           <div className="subtitle text">{project.subtitle}</div>
         </DevProjInfo>
-        <DevProjTagWrapper> {renderTags()}</DevProjTagWrapper>
+        <DevProjTagWrapper className="hover-show">
+          {" "}
+          {renderTags()}
+        </DevProjTagWrapper>
       </DevProjDescription>
       <div style={{ height: "200px" }}>
         {project.image && (
           <Image
-            className="image"
+            className="hover-show"
             src={project.image}
             alt="Project Thumbnail"
             style={DevProjectImageWrapper}

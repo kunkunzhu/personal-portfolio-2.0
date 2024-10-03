@@ -112,14 +112,14 @@ export const DevProjWrapper = styled.div`
   border: 2px solid;
   border-radius: 25px;
 
-  .image {
+  .hover-show {
     opacity: 0;
   }
   &:hover {
     box-shadow: -2rem 1rem 0 var(--highlight);
     transform: translate(2rem, -1rem);
     transition: 0.2s ease-in-out;
-    .image {
+    .hover-show {
       opacity: 1;
       transition: 0.2s ease-in-out;
     }
