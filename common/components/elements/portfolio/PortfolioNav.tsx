@@ -76,9 +76,7 @@ const NavItem = styled(Link)<NavItemProps>`
 
 export default function PortfolioNav() {
   const path = usePathname();
-  const isDesign = path.includes("design");
   const isExp = path.includes("exp");
-  const isDev = path.includes("portfolio") && !isDesign && !isExp;
 
   const renderBrowserBar = () => {
     return (
@@ -94,17 +92,11 @@ export default function PortfolioNav() {
     <BrowserBar>
       <NavWrapper>
         <div className="divItems">
-          <NavItem $current={isDev} href="/portfolio" id="no-sm">
-            dev
+          <NavItem $current={!isExp} href="/portfolio" id="no-sm">
+            projects
           </NavItem>
-          <NavItem $current={isDev} href="/portfolio" id="sm-only">
+          <NavItem $current={!isExp} href="/portfolio" id="sm-only">
             💻
-          </NavItem>
-          <NavItem $current={isDesign} href="/portfolio/design" id="no-sm">
-            designs
-          </NavItem>
-          <NavItem $current={isDesign} href="/portfolio/design" id="sm-only">
-            🎨
           </NavItem>
           <NavItem $current={isExp} href="/portfolio/exp" id="no-sm">
             Experiences

@@ -109,7 +109,7 @@ export const Nav = (props: NavProps) => {
             <NavItem $current={!isPortfolio} href="/">
               About
             </NavItem>
-            <NavItem $current={isPortfolio} href="/portfolio/design">
+            <NavItem $current={isPortfolio} href="/portfolio">
               Portfolio
             </NavItem>
           </HamburgerWrapper>

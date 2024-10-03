@@ -89,7 +89,7 @@ const ProjectBox = ({ project }: { project: DevProject }) => {
   );
 };
 
-export default function DevPortfolio() {
+export default function ProjectsPortfolio() {
   const [isGif, setIsGif] = useState(false);
 
   const renderDevProjects = () => {
@@ -106,17 +106,15 @@ export default function DevPortfolio() {
       <PortfolioBox gifBackground={isGif}>
         <Header>
           <div className="title">
-            Kun <span className="icon">{IconFrame()}</span> is a
-            curiosity-driven
+            Kun <span className="icon">{IconFrame()}</span> aspires to craft
             <span
               className="circle"
               onMouseEnter={() => setIsGif(true)}
               onMouseLeave={() => setIsGif(false)}
             >
-              developer
+              digital experiences
             </span>{" "}
-            aspiring to craft digital experiences that evoke serendipity{" "}
-            <span className="flora">✺</span> and delight{" "}
+            that evoke serendipity <span className="flora">✺</span> and delight{" "}
             <span className="flora">✹˖꙳</span>
           </div>
           <div className="prompt">
