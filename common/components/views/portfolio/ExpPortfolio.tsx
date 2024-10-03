@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { ReactNode, useState } from "react";
 import {
   extraExpData,
@@ -57,7 +59,7 @@ const ExpPill = ({ exp }: { exp: ExperienceInterface }) => {
   );
 };
 
-export default function MiscPortfolio() {
+export default function ExpPortfolio() {
   const [isGif, setIsGif] = useState<boolean>(false);
   const [isWork, setIsWork] = useState<boolean>(true);
 
