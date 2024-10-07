@@ -55,14 +55,14 @@ const ProjectBox = ({ project }: { project: DesignProjects }) => {
 export default function DesignPortfolio() {
   const [isGif, setIsGif] = useState(false);
 
-  const renderDesignProjects = () => {
-    const projects = Object.values(designData);
-    let projectsArray: Array<ReactNode> = [];
-    projects.map((project) =>
-      projectsArray.push(<ProjectBox project={project} key={project.key} />)
-    );
-    return projectsArray;
-  };
+  // const renderDesignProjects = () => {
+  //   const projects = Object.values(designData);
+  //   let projectsArray: Array<ReactNode> = [];
+  //   projects.map((project) =>
+  //     projectsArray.push(<ProjectBox project={project} key={project.key} />)
+  //   );
+  //   return projectsArray;
+  // };
 
   return (
     <div>
@@ -88,7 +88,7 @@ export default function DesignPortfolio() {
           </div>
           <hr />
         </Header>
-        {renderDesignProjects()}
+        {/* {renderDesignProjects()} */}
       </PortfolioBox>
     </div>
   );
