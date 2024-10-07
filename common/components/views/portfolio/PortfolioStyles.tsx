@@ -185,7 +185,7 @@ interface DevProjProps {
 export const DevProjTag = styled.div<DevProjProps>`
   font-family: var(--text-font);
   border: 2px solid;
-  opacity: ${(props) => (props.$Exp ? 1 : 0.5)};
+  opacity: ${(props) => (props.$misc ? 1 : 0.5)};
   border-radius: 25px;
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   word-break: break-all;
