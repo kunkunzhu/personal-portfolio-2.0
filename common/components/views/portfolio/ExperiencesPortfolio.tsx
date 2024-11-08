@@ -10,15 +10,17 @@ import PortfolioBox from "@/common/components/elements/portfolio/PortfolioBox";
 import {
   AllExpWrapper,
   ExpDescription,
-  ExpPilLWrapper,
+  ExpPillWrapper,
   ExpTitle,
   ExpYearWrapper,
+} from "./styles/ExpPortfolioStyles";
+import {
+  Arrow,
   Header,
   PromptWrapper,
   TogglePill,
   TogglePillWrapper,
-  Arrow,
-} from "./PortfolioStyles";
+} from "./styles/PortfolioStyles";
 
 interface ExperienceInterface {
   key: string;
@@ -40,7 +42,7 @@ interface YearExperiencesDataInterface {
 
 const ExpPill = ({ exp }: { exp: ExperienceInterface }) => {
   return (
-    <ExpPilLWrapper>
+    <ExpPillWrapper>
       <div className="text">
         <ExpTitle>
           <div className="role">{exp.role}</div>
@@ -55,7 +57,7 @@ const ExpPill = ({ exp }: { exp: ExperienceInterface }) => {
         </ExpTitle>
         {exp.tagline && <ExpDescription>{exp.tagline}.</ExpDescription>}
       </div>
-    </ExpPilLWrapper>
+    </ExpPillWrapper>
   );
 };
 
