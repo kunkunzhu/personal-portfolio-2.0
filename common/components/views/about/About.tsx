@@ -217,7 +217,7 @@ function Workspace() {
             {displayLinks && (
               <CollapsedText>
                 {" "}
-                by double clicking on these emojis •ᴗ•
+                by double clicking on any of these emojis •ᴗ•
               </CollapsedText>
             )}
             .
